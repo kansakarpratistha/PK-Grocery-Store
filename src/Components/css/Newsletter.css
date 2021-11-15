@@ -1,0 +1,45 @@
+.newsletter{
+	padding:3em 0;
+	background:#FA1818;
+}
+.w3agile_newsletter_left{
+	float: left;
+    width: 35%;
+    text-align: right;
+}
+.w3agile_newsletter_left h3{
+	text-transform: capitalize;
+    font-size: 1.2em;
+    color: #fff;
+    margin: .5em 0 0;
+}
+.w3agile_newsletter_right{
+	float: left;
+    width: 50%;
+    margin-left: 2em;
+}
+.w3agile_newsletter_right input[type="email"]{
+	outline: none;
+    padding: 10px;
+    background: none;
+    border: 1px solid #E6E6E6;
+    font-size: 14px;
+    color: #fff;
+    width: 74%;
+    float: left;
+}
+.w3agile_newsletter_right input[type="submit"]{
+	outline: none;
+    padding: 10px 0;
+    background: #fff;
+    border: 1px solid #fff;
+    font-size: 14px;
+    color: #FA1818;
+    width: 25.7%;
+    text-transform: uppercase;
+}
+.w3agile_newsletter_right input[type="submit"]:hover{
+	background:#84C639;
+	border: 1px solid #84C639;
+	color:#fff;
+}
