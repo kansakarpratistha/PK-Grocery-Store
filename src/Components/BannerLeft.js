@@ -1,5 +1,6 @@
 import react from "react";
 import { Navbar, Nav, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function BannerLeft() {
   return (
@@ -27,10 +28,10 @@ function BannerLeft() {
           <ul className="nav navbar-nav nav_1">
             <Nav>
               <li>
-                <a href="products.html">Branded Foods</a>
+                <Link to="/products">Branded Foods</Link>
               </li>
               <li>
-                <a href="household.html">Households</a>
+                <Link to="/household">Households</Link>
               </li>
               <li className="dropdown mega-dropdown active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -40,10 +41,10 @@ function BannerLeft() {
                   <div className="w3ls_vegetables">
                     <ul>
                       <li>
-                        <a href="vegetables.html">Vegetables</a>
+                        <Link to="/vegetables">Vegetables</Link>
                       </li>
                       <li>
-                        <a href="vegetables.html">Fruits</a>
+                        <Link to="/vegetables">Fruits</Link>
                       </li>
                     </ul>
                   </div>

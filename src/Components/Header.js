@@ -8,6 +8,8 @@ import {
   faPhone,
   faEnvelopeOpen,
   faCaretDown,
+  faEnvelope,
+  faPhoneAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
@@ -15,7 +17,7 @@ function Header() {
     <>
       <div className="agileits_header">
         <div className="w3l_offers">
-          <Link to="/">Today's special Offers</Link>
+          <Link to="/products">Today's special Offers</Link>
           {/* <a href="products.html">Today's special Offers !</a> */}
         </div>
         <div className="w3l_search">
@@ -81,7 +83,7 @@ function Header() {
         </div>
         <div className="w3l_header_right1">
           <h2>
-            <Link to="/">Contact Us</Link>
+            <Link to="/contact">Contact Us</Link>
           </h2>
         </div>
         <div className="clearfix"> </div>
@@ -107,22 +109,22 @@ function Header() {
                 <i>/</i>
               </li>
               <li>
-                <Link to="/">Best Deals</Link>
+                <Link to="/products">Best Deals</Link>
                 <i>/</i>
               </li>
               <li>
-                <Link to="/">Services</Link>
+                <Link to="/services">Services</Link>
               </li>
             </ul>
           </div>
           <div className="w3ls_logo_products_left1">
             <ul className="phone_email">
               <li>
-                <FontAwesomeIcon icon={faPhone} />
+                <FontAwesomeIcon icon={faPhoneAlt} />
                 (+0123) 234 567
               </li>
               <li>
-                <FontAwesomeIcon icon={faEnvelopeOpen} />
+                <FontAwesomeIcon icon={faEnvelope} />
                 <a href="mailto:store@grocery.com">store@grocery.com</a>
               </li>
             </ul>

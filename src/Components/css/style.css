@@ -3106,8 +3106,8 @@ input.checkbox:checked:after {
 	.w3agile_event_grid_left {
 		height: 171px;
 	}
-	.w3agile_event_grid_left i {
-		padding-top: 2em;
+	.w3agile_event_grid_left svg {
+		margin-top: 2em;
 	}
 	.events_bottom_left1_grid h4 {
 		font-size: 1.5em;
@@ -4362,8 +4362,8 @@ input.checkbox:checked:after {
 	.w3agile_event_grid_left {
 		height: 140px;
 	}
-	.w3agile_event_grid_left i {
-		padding-top: 1.5em;
+	.w3agile_event_grid_left svg {
+		margin-top: 1.5em;
 	}
 	.events_bottom_left1 {
 		padding-left: 0;
@@ -4750,8 +4750,8 @@ input.checkbox:checked:after {
 		font-size: .9em;
 		margin: 1em 0 0;
 	}
-	.w3agile_event_grid_left i {
-		padding-top: 2.5em;
+	.w3agile_event_grid_left svg {
+		margin-top: 2.5em;
 		font-size: 1.5em;
 	}
 	.events_bottom_left1 {

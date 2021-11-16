@@ -8,6 +8,7 @@ import image35 from "./images/35.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
+  faFacebookF,
   faGoogle,
   faGooglePlusG,
   faTwitter,
@@ -26,21 +27,18 @@ function Team() {
               <p>Manager</p>
               <ul className="agileits_social_icons agileits_social_icons_team">
                 <li>
-                  <Link to="/" className="facebook">
-                    <FontAwesomeIcon icon={faFacebook} />
-                    <i className="fa fa-facebook" aria-hidden="true"></i>
-                  </Link>
+                  <a href="#" className="facebook">
+                    <FontAwesomeIcon icon={faFacebookF} />
+                  </a>
                 </li>
                 <li>
                   <a href="#" className="twitter">
                     <FontAwesomeIcon icon={faTwitter} />
-                    <i className="fa fa-twitter" aria-hidden="true"></i>
                   </a>
                 </li>
                 <li>
                   <a href="#" className="google">
                     <FontAwesomeIcon icon={faGooglePlusG} />
-                    <i className="fa fa-google-plus" aria-hidden="true"></i>
                   </a>
                 </li>
               </ul>
@@ -52,17 +50,17 @@ function Team() {
               <ul className="agileits_social_icons agileits_social_icons_team">
                 <li>
                   <a href="#" className="facebook">
-                    <i className="fa fa-facebook" aria-hidden="true"></i>
+                    <FontAwesomeIcon icon={faFacebookF} />
                   </a>
                 </li>
                 <li>
                   <a href="#" className="twitter">
-                    <i className="fa fa-twitter" aria-hidden="true"></i>
+                    <FontAwesomeIcon icon={faTwitter} />
                   </a>
                 </li>
                 <li>
                   <a href="#" className="google">
-                    <i className="fa fa-google-plus" aria-hidden="true"></i>
+                    <FontAwesomeIcon icon={faGooglePlusG} />
                   </a>
                 </li>
               </ul>
@@ -74,17 +72,17 @@ function Team() {
               <ul className="agileits_social_icons agileits_social_icons_team">
                 <li>
                   <a href="#" className="facebook">
-                    <i className="fa fa-facebook" aria-hidden="true"></i>
+                    <FontAwesomeIcon icon={faFacebookF} />
                   </a>
                 </li>
                 <li>
                   <a href="#" className="twitter">
-                    <i className="fa fa-twitter" aria-hidden="true"></i>
+                    <FontAwesomeIcon icon={faTwitter} />
                   </a>
                 </li>
                 <li>
                   <a href="#" className="google">
-                    <i className="fa fa-google-plus" aria-hidden="true"></i>
+                    <FontAwesomeIcon icon={faGooglePlusG} />
                   </a>
                 </li>
               </ul>
@@ -96,17 +94,17 @@ function Team() {
               <ul className="agileits_social_icons agileits_social_icons_team">
                 <li>
                   <a href="#" className="facebook">
-                    <i className="fa fa-facebook" aria-hidden="true"></i>
+                    <FontAwesomeIcon icon={faFacebookF} />
                   </a>
                 </li>
                 <li>
                   <a href="#" className="twitter">
-                    <i className="fa fa-twitter" aria-hidden="true"></i>
+                    <FontAwesomeIcon icon={faTwitter} />
                   </a>
                 </li>
                 <li>
                   <a href="#" className="google">
-                    <i className="fa fa-google-plus" aria-hidden="true"></i>
+                    <FontAwesomeIcon icon={faGooglePlusG} />
                   </a>
                 </li>
               </ul>

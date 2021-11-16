@@ -196,8 +196,8 @@ ul.dropdown-menu.drp-mnu li a i {
 	color:#212121;
 	text-decoration:none;
 }
-.w3ls_logo_products_left1 ul.phone_email li i{
-	padding-right:1em;
+.w3ls_logo_products_left1 ul.phone_email li svg{
+	margin-right:1em;
 }
 .w3ls_logo_products_left1 ul.special_items li{
 	display:inline-block;
@@ -922,8 +922,8 @@ button.submit.check_out{
 	margin-bottom:1.5em;
 	color:#84C639;
 }
-.w3l_fresh_vegetables_grid ul li i{
-	padding-right:1em;
+.w3l_fresh_vegetables_grid ul li svg{
+	margin-right:1em;
 }
 .w3l_fresh_vegetables_grid ul li a{
 	font-size:14px;
@@ -1111,8 +1111,8 @@ button.submit.check_out{
     display: block;
     text-align: center;
 }
-.agileits_social_icons li a i {
-    padding: 0.8em 0 0;
+.agileits_social_icons li a svg {
+    margin: 0.8em 0 0;
 }
 .agileits_social_icons li a.facebook:hover{
 	background:#3b5998;
@@ -1223,8 +1223,8 @@ button.submit.check_out{
 .products-breadcrumb ul li a:hover{
 	color:#FA1818;
 }
-.products-breadcrumb ul li i {
-    padding-right: 1em;
+.products-breadcrumb ul li svg {
+    margin-right: 1em;
 	color:#FA1818;
 }
 /*-- //products-breadcrumb --*/
@@ -1992,8 +1992,8 @@ a.pa_italic:focus {
 	color:#212121;
 	text-transform:capitalize;
 }
-.w3ls_service_grids1_right ul li i{
-	padding-right:1em;
+.w3ls_service_grids1_right ul li svg{
+	margin-right:1em;
 	color:#84C639;
 }
 .w3ls_service_grids1_left img {
@@ -2036,7 +2036,7 @@ a.pa_italic:focus {
     font-size: 1.3em;
     margin: .5em 0 0;
 }
-.wthree_news_top_serv_btm_grid_icon i{
+.wthree_news_top_serv_btm_grid_icon svg{
 	font-size: 2.5em;
     color: #FA1818;
 }
@@ -2187,10 +2187,10 @@ ul.wmuSliderPagination {
 /*-- //wmuslider --*/
 /*-- //team --*/
 /*-- events --*/
-.w3agile_event_grid_left i{
+.w3agile_event_grid_left svg{
 	font-size: 2em;
     color: #FA1818;
-    padding-top: 1em;
+    margin-top: 1em;
 }
 .w3agile_event_grid_right{
 	border-left: 1px solid #D2D2D2;
@@ -2220,7 +2220,7 @@ ul.wmuSliderPagination {
 	margin:3em 0;
 }
 .events_bottom_left1_grid {
-    width: 125px;
+    width: 125px !important;
     height: 125px;
     background:#84C639;
     text-align: center;
@@ -2236,7 +2236,7 @@ ul.wmuSliderPagination {
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
-    padding-top: .8em;
+    /* padding-top: .8em; */
 }
 .events_bottom_left2 {
     padding: 0;
@@ -2864,7 +2864,7 @@ input.checkbox:checked:after {
 		font-size: 1em;
 	}
 	.w3agile_event_grid_left {
-		height: 108px;
+		height: 108px !important;
 	}
 	.events_bottom_left2 h4 {
 		line-height: 1.8em;
@@ -2962,7 +2962,7 @@ input.checkbox:checked:after {
 		padding: 5em 3em;
 	}
 	.events_bottom_left1_grid {
-		width: 110px;
+		width: 110px !important;
 		height: 110px;
 	}
 	.events_bottom_left1_grid h4 {
@@ -3106,14 +3106,14 @@ input.checkbox:checked:after {
 	.w3agile_event_grid_left {
 		height: 171px;
 	}
-	.w3agile_event_grid_left i {
-		padding-top: 2em;
+	.w3agile_event_grid_left svg {
+		margin-top: 2em;
 	}
 	.events_bottom_left1_grid h4 {
 		font-size: 1.5em;
 	}
 	.events_bottom_left1_grid {
-		width: 85px;
+		width: 85px !important;
 		height: 90px;
 	}
 	.events_bottom_left2 h4 {
@@ -3210,8 +3210,8 @@ input.checkbox:checked:after {
 	.w3ls_logo_products_left {
 		margin-right: 1em;
 	}
-	.w3ls_logo_products_left1 ul.phone_email li i {
-		padding-right: .5em;
+	.w3ls_logo_products_left1 ul.phone_email li svg {
+		margin-right: .5em;
 	}
 	.w3l_banner_nav_right_banner {
 		background-position:-70px 0px;
@@ -3397,29 +3397,29 @@ input.checkbox:checked:after {
 	}
 	.w3agile_event_grid_right {
 		float: right;
-		width: 80%;
+		width: 80% !important;
 	}
 	.w3agile_event_grid_left {
-		height: 117px;
+		height: 117px !important;
 		float: left;
-		width: 20%;
+		width: 20% !important;
 	}
-	.w3agile_event_grid_left i {
-		padding-top: 1em;
+	.w3agile_event_grid_left svg {
+		margin-top: 1em;
 	}
 	.w3agile_event_grid:nth-child(2) {
 		margin: 3em 0 0;
 	}
 	.events_bottom_left1 {
 		float: left;
-		width: 30%;
+		width: 30% !important;
 	}
 	.events_bottom_left2 {
 		float: right;
-		width: 70%;
+		width: 70% !important;
 	}
 	.events_bottom_left1_grid {
-		width: 125px;
+		width: 125px !important;
 		height: 115px;
 	}
 	.events_bottom_left1_grid h4 {
@@ -3664,7 +3664,7 @@ input.checkbox:checked:after {
 		padding-left: 0;
 	}
 	.events_bottom_left1_grid {
-		width: 120px;
+		width: 120px !important;
 	}
 	.agileinfo_mail_grid_left {
 		width: 75%;
@@ -4211,7 +4211,7 @@ input.checkbox:checked:after {
 		padding: 0;
 	}
 	.events_bottom_left1_grid {
-		width: 98px;
+		width: 98px !important;
 	}
 	.agileinfo_mail_grid_left ul li {
 		font-size: .9em;
@@ -4362,14 +4362,14 @@ input.checkbox:checked:after {
 	.w3agile_event_grid_left {
 		height: 140px;
 	}
-	.w3agile_event_grid_left i {
-		padding-top: 1.5em;
+	.w3agile_event_grid_left svg {
+		margin-top: 1.5em;
 	}
 	.events_bottom_left1 {
 		padding-left: 0;
 	}
 	.events_bottom_left1_grid {
-		width: 95px;
+		width: 95px !important;
 	}
 	.form-module .form {
 		padding: 20px;
@@ -4519,7 +4519,7 @@ input.checkbox:checked:after {
 		margin: 2em 0 0;
 	}
 	.events_bottom_left1_grid {
-		width: 85px;
+		width: 85px !important;
 	}
 	.form-module .cta {
 		padding: 10px 0px;
@@ -4535,8 +4535,8 @@ input.checkbox:checked:after {
 	}
 }
 @media (max-width: 320px){
-	.agileits_social_icons li a i {
-		padding: .9em 0 0;
+	.agileits_social_icons li a svg {
+		margin: .9em 0 0;
 	}
 	ul li, ol li {
 		font-size: 13px;
@@ -4740,7 +4740,7 @@ input.checkbox:checked:after {
 	.wthree_news_top_serv_btm_grid,.w3_testimonials_grid {
 		padding: 0;
 	}
-	.wthree_news_top_serv_btm_grid_icon i {
+	.wthree_news_top_serv_btm_grid_icon svg {
 		font-size: 1.5em;
 	}
 	.w3_testimonials_grid p i {
@@ -4750,15 +4750,15 @@ input.checkbox:checked:after {
 		font-size: .9em;
 		margin: 1em 0 0;
 	}
-	.w3agile_event_grid_left i {
-		padding-top: 2.5em;
+	.w3agile_event_grid_left svg {
+		margin-top: 2.5em;
 		font-size: 1.5em;
 	}
 	.events_bottom_left1 {
 		padding-right: .5em;
 	}
 	.events_bottom_left1_grid {
-		width: 73px;
+		width: 73px !important;
 		height: 86px;
 	}
 	.events_bottom_left1_grid h4 {
