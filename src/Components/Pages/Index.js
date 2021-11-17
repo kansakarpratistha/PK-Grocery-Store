@@ -14,7 +14,7 @@ function Index(){
             <div className="clearfix"></div>
         </div>
         <BannerBottom/>
-        <TopBrands />
+        <TopBrands text="Top Brands" />
         <FreshVegetables/>
         </>
         

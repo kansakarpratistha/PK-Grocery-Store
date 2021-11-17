@@ -20,16 +20,16 @@ function Footer() {
             <h3>information</h3>
             <ul className="w3_footer_grid_list">
               <li>
-                <Link to="/">Events</Link>
+                <Link to="/events">Events</Link>
               </li>
               <li>
-                <Link to="/">About Us</Link>
+                <Link to="/about">About Us</Link>
               </li>
               <li>
-                <Link to="/">Best Deals</Link>
+                <Link to="/products">Best Deals</Link>
               </li>
               <li>
-                <Link to="/">Services</Link>
+                <Link to="/services">Services</Link>
               </li>
               <li>
                 <Link to="/">Short Codes</Link>
@@ -40,13 +40,13 @@ function Footer() {
             <h3>policy info</h3>
             <ul className="w3_footer_grid_list">
               <li>
-                <Link to="/">FAQ</Link>
+                <Link to="/faq">FAQ</Link>
               </li>
               <li>
                 <Link to="/privacy">privacy policy</Link>
               </li>
               <li>
-                <Link to="/">terms of use</Link>
+                <Link to="/privacy">terms of use</Link>
               </li>
             </ul>
           </Col>
@@ -54,19 +54,19 @@ function Footer() {
             <h3>what in stores</h3>
             <ul className="w3_footer_grid_list">
               <li>
-                <Link to="/">Pet Food</Link>
+                <Link to="/pet">Pet Food</Link>
               </li>
               <li>
-                <Link to="/">Frozen Snacks</Link>
+                <Link to="frozen">Frozen Snacks</Link>
               </li>
               <li>
-                <Link to="/">Kitchen</Link>
+                <Link to="/kitchen">Kitchen</Link>
               </li>
               <li>
-                <Link to="/">Branded Foods</Link>
+                <Link to="/products">Branded Foods</Link>
               </li>
               <li>
-                <Link to="/">Households</Link>
+                <Link to="/household">Households</Link>
               </li>
             </ul>
           </Col>

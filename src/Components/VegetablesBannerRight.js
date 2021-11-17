@@ -1,5 +1,5 @@
 import { Row, Col, Image } from "react-bootstrap";
-import image18 from './images/19.jpg';
+import image18 from './images/18.jpg';
 import image19 from './images/19.jpg';
 import image20 from './images/20.jpg';
 import tag from './images/tag.png';

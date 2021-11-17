@@ -18,7 +18,6 @@ function Header() {
       <div className="agileits_header">
         <div className="w3l_offers">
           <Link to="/products">Today's special Offers</Link>
-          {/* <a href="products.html">Today's special Offers !</a> */}
         </div>
         <div className="w3l_search">
           <form action="#" method="post">
@@ -48,7 +47,23 @@ function Header() {
           </form>
         </div>
         <div className="w3l_header_right">
-          <ul>
+          <Dropdown className="profile_details_drop">
+            <Dropdown.Toggle id="profileList" aria-expanded="false">
+              <FontAwesomeIcon icon={faUser} />
+              <span>
+                <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon>
+              </span>
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item id="profileList" className="drp-mnu">
+                <Link to="/login">Login</Link>
+              </Dropdown.Item>
+              <Dropdown.Item id="profileList">
+                <Link to="/login">Sign Up</Link>
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+          {/* <ul>
             <li className={`profile_details_drop ${<Dropdown/>}`}>
               <Dropdown>
                 <Link to="/" className="dropdown-toggle" data-toggle="dropdown">
@@ -79,7 +94,7 @@ function Header() {
                 </div>
               </Dropdown>
             </li>
-          </ul>
+          </ul> */}
         </div>
         <div className="w3l_header_right1">
           <h2>
@@ -88,7 +103,7 @@ function Header() {
         </div>
         <div className="clearfix"> </div>
       </div>
-      
+
       <div className="logo_products">
         <Container>
           <div className="w3ls_logo_products_left">

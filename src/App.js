@@ -14,6 +14,12 @@ import Products from "./Components/Pages/Products";
 import Services from "./Components/Pages/Services";
 import HouseHold from "./Components/Pages/Household";
 import Vegetables from "./Components/Pages/Vegetables";
+import Kitchen from "./Components/Pages/Kitchen";
+import FrozenFood from "./Components/Pages/FrozenFood";
+import Beverages from "./Components/Pages/Beverages";
+import PetFood from "./Components/Pages/PetFood";
+import Bread from "./Components/Pages/Bread";
+import Faq from "./Components/Pages/Faq";
 
 function App() {
   return (
@@ -30,6 +36,12 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/household" element={<HouseHold />} />
         <Route path="/vegetables" element={<Vegetables />} />
+        <Route path="/kitchen" element={<Kitchen />} />
+        <Route path="/frozen" element={<FrozenFood />} />
+        <Route path="/beverages" element={<Beverages />} />
+        <Route path="/pet" element={<PetFood />} />
+        <Route path="/bread" element={<Bread />} />
+        <Route path="/faq" element={<Faq />} />
       </Routes>
       <Newsletter />
       <Footer />

@@ -6,13 +6,14 @@ import image3 from "./images/3.png";
 import offer from "./images/offer.png";
 import image2 from "./images/2.png";
 import image4 from "./images/4.png";
+import { propTypes } from "react-bootstrap/esm/Image";
 
 
-function TopBrands() {
+function TopBrands(props) {
   return (
     <div className="top-brands">
       <Container>
-        <h3>Hot Offers</h3>
+        <h3>{props.text}</h3>
         <div className="agile_top_brands_grids">
           <Row>
             <Col md={3} className="top_brand_left">
@@ -86,7 +87,7 @@ function TopBrands() {
                           <a href="single.html">
                             <img title=" " alt=" " src={image3} />
                           </a>
-                          <p>basmati rise (5 Kg)</p>
+                          <p>basmati rice (5 Kg)</p>
                           <h4>
                             $11.99 <span>$15.00</span>
                           </h4>

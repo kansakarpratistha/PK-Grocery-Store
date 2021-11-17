@@ -118,7 +118,7 @@ ul.dropdown-menu.drp-mnu {
 ul.dropdown-menu.drp-mnu li:first-child{
 	margin-bottom: .5em;
 }
-ul.dropdown-menu.drp-mnu li a {
+dropdown-menu.drp-mnu a a{
     color: #999;
 }
 ul.dropdown-menu.drp-mnu li a i {
@@ -141,7 +141,7 @@ ul.dropdown-menu.drp-mnu li a i {
     line-height: 1;
     height: 97px;
 }
-.profile_details_drop a {
+.profile_details_drop .dropdown-toggle {
     display: block;
 	padding-top:1em;
 	font-size:1em;
