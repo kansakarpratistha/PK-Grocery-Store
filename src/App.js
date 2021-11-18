@@ -1,5 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
+import "@fontsource/ubuntu";
+import "@fontsource/open-sans";
 import Index from "./Components/Pages/Index";
 import AboutUs from "./Components/Pages/AboutUs";
 import Privacy from "./Components/Pages/Privacy";
@@ -20,6 +22,9 @@ import Beverages from "./Components/Pages/Beverages";
 import PetFood from "./Components/Pages/PetFood";
 import Bread from "./Components/Pages/Bread";
 import Faq from "./Components/Pages/Faq";
+import Single from "./Components/Pages/Single";
+import Checkout from "./Components/Pages/Checkout";
+import Payment from "./Components/Pages/Payment";
 
 function App() {
   return (
@@ -42,6 +47,9 @@ function App() {
         <Route path="/pet" element={<PetFood />} />
         <Route path="/bread" element={<Bread />} />
         <Route path="/faq" element={<Faq />} />
+        <Route path="/single" element={<Single />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
       <Newsletter />
       <Footer />

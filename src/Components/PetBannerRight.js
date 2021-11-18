@@ -13,6 +13,7 @@ import image28 from './images/28.png';
 import image4 from './images/4.png';
 import offer from './images/offer.png';
 import tag from './images/tag.png';
+import { Link } from "react-router-dom";
 
 function PetBannerRight() {
   return (
@@ -20,7 +21,7 @@ function PetBannerRight() {
       <div className="w3l_banner_nav_right_banner9 w3l_banner_nav_right_banner_pet">
         <h4>Your Pet Favourite Food</h4>
         <p>Sint occaecat cupidatat non proident</p>
-        <a href="single.html">Shop Now</a>
+        <Link to="/single">Shop Now</Link>
       </div>
       <div className="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_sub">
         <h3 className="w3l_fruit">Pet Food</h3>
@@ -44,14 +45,14 @@ function PetBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image
                               fluid
                               src={image57}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>can - tuna for cats (400 gm)</p>
                           <h4>
                             $8.00 <span>$10.00</span>
@@ -115,14 +116,14 @@ function PetBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image
                               fluid
                               src={image58}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>junior pet food (90 gm)</p>
                           <h4>
                             $5.00 <span>$6.00</span>
@@ -189,14 +190,14 @@ function PetBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image
                               fluid
                               src={image4}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>dogs food - junior (4 Kg)</p>
                           <h4>
                             $9.00 <span>$11.00</span>
@@ -260,14 +261,14 @@ function PetBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image
                               fluid
                               src={image59}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>gravy food for dogs (20 kg)</p>
                           <h4>
                             $15.00 <span>$18.00</span>
@@ -343,14 +344,14 @@ function PetBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image
                               fluid
                               src={image60}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>meat for dogs (100 gm)</p>
                           <h4>
                             $8.00 <span>$10.00</span>
@@ -414,14 +415,14 @@ function PetBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image
                               fluid
                               src={image61}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>weekly pack (200 gm)</p>
                           <h4>
                             $5.00 <span>$8.00</span>
@@ -488,14 +489,14 @@ function PetBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image
                               fluid
                               src={image62}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>dog munchies (500 gm)</p>
                           <h4>
                             $6.00 <span>$8.00</span>
@@ -559,14 +560,14 @@ function PetBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image
                               fluid
                               src={image63}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>nutrition for cats (90 gm)</p>
                           <h4>
                             $6.00 <span>$8.00</span>
@@ -638,14 +639,14 @@ function PetBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image
                               fluid
                               src={image25}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>food for adult dogs (80 gms)</p>
                           <h4>
                             $3.00 <span>$4.00</span>
@@ -709,14 +710,14 @@ function PetBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image
                               fluid
                               src={image26}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>young adult dogs (1.2 kg)</p>
                           <h4>
                             $6.00 <span>$10.00</span>
@@ -783,14 +784,14 @@ function PetBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image
                               fluid
                               src={image27}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>cat food ocean fish (1.4 kg)</p>
                           <h4>
                             $6.00 <span>$7.00</span>
@@ -854,14 +855,14 @@ function PetBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image
                               fluid
                               src={image28}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>chicken in jelly can (400 gm)</p>
                           <h4>
                             $7.00 <span>$9.00</span>

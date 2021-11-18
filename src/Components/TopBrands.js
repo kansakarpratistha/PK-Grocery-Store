@@ -1,12 +1,12 @@
 import react from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import tag from "./images/tag.png";
 import image1 from "./images/1.png";
 import image3 from "./images/3.png";
 import offer from "./images/offer.png";
 import image2 from "./images/2.png";
 import image4 from "./images/4.png";
-import { propTypes } from "react-bootstrap/esm/Image";
+import { Link } from "react-router-dom";
 
 
 function TopBrands(props) {
@@ -20,15 +20,15 @@ function TopBrands(props) {
               <div className="hover14 column">
                 <div className="agile_top_brand_left_grid">
                   <div className="tag">
-                    <img src={tag} alt=" " className="img-responsive" />
+                    <Image fluid  src={tag} alt=" " className="img-responsive" />
                   </div>
                   <div className="agile_top_brand_left_grid1">
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
-                            <img title=" " alt=" " src={image1} />
-                          </a>
+                          <Link to="/single">
+                            <Image fluid  title=" " alt=" " src={image1} />
+                          </Link>
                           <p>fortune sunflower oil</p>
                           <h4>
                             $7.99 <span>$10.00</span>
@@ -84,9 +84,9 @@ function TopBrands(props) {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
-                            <img title=" " alt=" " src={image3} />
-                          </a>
+                          <Link to="/single">
+                            <Image fluid  title=" " alt=" " src={image3} />
+                          </Link>
                           <p>basmati rice (5 Kg)</p>
                           <h4>
                             $11.99 <span>$15.00</span>
@@ -143,19 +143,19 @@ function TopBrands(props) {
               <div className="hover14 column">
                 <div className="agile_top_brand_left_grid">
                   <div className="agile_top_brand_left_grid_pos">
-                    <img src={offer} alt=" " className="img-responsive" />
+                    <Image fluid  src={offer} alt=" " className="img-responsive" />
                   </div>
                   <div className="agile_top_brand_left_grid1">
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
-                            <img
+                          <Link to="/single">
+                            <Image fluid 
                               src={image2}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>Pepsi soft drink (2 Ltr)</p>
                           <h4>
                             $8.00 <span>$10.00</span>
@@ -208,19 +208,19 @@ function TopBrands(props) {
               <div className="hover14 column">
                 <div className="agile_top_brand_left_grid">
                   <div className="agile_top_brand_left_grid_pos">
-                    <img src={offer} alt=" " className="img-responsive" />
+                    <Image fluid  src={offer} alt=" " className="img-responsive" />
                   </div>
                   <div className="agile_top_brand_left_grid1">
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
-                            <img
+                          <Link to="/single">
+                            <Image fluid 
                               src={image4}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>dogs food (4 Kg)</p>
                           <h4>
                             $9.00 <span>$11.00</span>

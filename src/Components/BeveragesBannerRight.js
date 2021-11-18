@@ -1,4 +1,5 @@
 import { Row, Col, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import offer from './images/offer.png';
 import tag from './images/tag.png';
 import image13 from './images/13.png';
@@ -41,13 +42,13 @@ function BeveragesBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image49}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>orange soft drink (250 ml)</p>
                           <h4>
                             $5.00 <span>$7.00</span>
@@ -110,13 +111,13 @@ function BeveragesBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image14}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>prune juice - sunsweet (1 ltr)</p>
                           <h4>
                             $4.00 <span>$5.00</span>
@@ -179,13 +180,13 @@ function BeveragesBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image15}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>coco cola zero can (330 ml)</p>
                           <h4>
                             $3.00 <span>$5.00</span>
@@ -248,13 +249,13 @@ function BeveragesBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image16}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>sprite bottle (2 ltr)</p>
                           <h4>
                             $3.00 <span>$4.00</span>
@@ -323,13 +324,13 @@ function BeveragesBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image13}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>mixed fruit juice (1 ltr)</p>
                           <h4>
                             $3.00 <span>$4.00</span>
@@ -392,13 +393,13 @@ function BeveragesBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image50}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>aamras juice (250 ml)</p>
                           <h4>
                             $4.00 <span>$5.00</span>
@@ -461,13 +462,13 @@ function BeveragesBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image51}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>coconut water (1000 ml)</p>
                           <h4>
                             $6.00 <span>$8.00</span>
@@ -530,13 +531,13 @@ function BeveragesBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image52}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>ceres orange juice (1 ltr)</p>
                           <h4>
                             $6.00 <span>$8.00</span>
@@ -605,13 +606,13 @@ function BeveragesBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image53}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>dabur glucose D (250 gm)</p>
                           <h4>
                             $10.00 <span>$12.00</span>
@@ -678,13 +679,13 @@ function BeveragesBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image54}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>mix lemon flavour (50 gm)</p>
                           <h4>
                             $8.00 <span>$10.00</span>
@@ -747,13 +748,13 @@ function BeveragesBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image55}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>schweppes water (250 ltr)</p>
                           <h4>
                             $6.00 <span>$7.00</span>
@@ -816,13 +817,13 @@ function BeveragesBannerRight() {
                     <figure>
                       <div className="snipcart-item block">
                         <div className="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image56}
                               alt=" "
                               className="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>red bull energy drink (250 ml)</p>
                           <h4>
                             $7.00 <span>$9.00</span>

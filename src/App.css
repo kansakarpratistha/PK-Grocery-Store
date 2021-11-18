@@ -294,7 +294,8 @@ ul.dropdown-menu.drp-mnu li a i {
   margin: 0;
   border-top: 1px solid #b58f62;
 }
-.navbar-nav > li > a, .nav_link {
+.navbar-nav > li > a,
+.nav_link {
   color: #212121;
   padding: 10px 0px 10px 40px !important;
   border-bottom: 1px dotted #cdcdcd;
@@ -907,9 +908,9 @@ select.form-control.option-w3ls {
   border-radius: 0;
 }
 .btn-primary {
-  color: #fff;
-  background-color: #84c639;
-  border-color: #84c639;
+  color: #fff !important;
+  background-color: #84c639 !important;
+  border-color: #84c639 !important;
   border-radius: 0;
 }
 button.submit.check_out {
@@ -2640,11 +2641,11 @@ table.timetable_sub {
   width: 100%;
   margin: 0 auto;
 }
-.timetable_sub thead {
+/* .timetable_sub thead {
   background: #004284;
-}
+} */
 .timetable_sub th {
-  background: #212121;
+  background: #212121 !important;
   color: #fff !important;
   text-transform: capitalize;
   font-size: 13px;
@@ -2652,13 +2653,13 @@ table.timetable_sub {
 }
 .timetable_sub th,
 .timetable_sub td {
-  text-align: center;
-  padding: 7px;
+  text-align: center !important;
+  padding: 7px !important;
   font-size: 14px;
-  color: #212121;
 }
 .timetable_sub td {
-  border: 1px solid #cdcdcd;
+  border: 1px solid #cdcdcd !important;
+  color: #212121 !important;
 }
 td.invert-image a img {
   width: 30%;
@@ -3423,7 +3424,8 @@ input.checkbox:checked:after {
   .more {
     margin-left: 40em;
   }
-  .navbar-nav > li > a, .nav_link {
+  .navbar-nav > li > a,
+  .nav_link {
     padding: 10px 0px 10px 25px !important;
   }
   .w3l_banner_nav_right_banner3 h3,
@@ -3806,7 +3808,8 @@ input.checkbox:checked:after {
   .w3ls_logo_products_left1 {
     margin-top: 1.6em;
   }
-  .navbar-nav > li > a, .nav_link {
+  .navbar-nav > li > a,
+  .nav_link {
     padding: 10px 0px 10px 15px !important;
   }
   .w3ls_vegetables_menu {
@@ -4207,11 +4210,11 @@ input.checkbox:checked:after {
   }
   .timetable_sub th,
   .timetable_sub td {
-    padding: 7px 0px;
+    padding: 7px 0px !important;
   }
   .timetable_sub th,
   .timetable_sub td {
-    width: 50px;
+    width: 50px !important;
     font-size: 12px;
   }
   button.submit.check_out {
@@ -5325,56 +5328,92 @@ input.checkbox:checked:after {
   border-left: none !important;
 }
 
-.dropdown-toggle svg{
-	line-height: 1;
+.dropdown-toggle svg {
+  line-height: 1;
 }
 
-.dropdown-toggle::after{
-	display: none !important;
+.dropdown-toggle::after {
+  display: none !important;
 }
 
-#profileList a{
-	color: #999;
-	text-decoration: none;
-	font-size: 1em;
+#profileList a {
+  color: #999;
+  text-decoration: none;
+  font-size: 1em;
 }
 
-#profileList a:hover{
-	color: red;
+#profileList a:hover {
+  color: red;
 }
 
-#profileList:active{
-	background-color: transparent;
+#profileList:active {
+  background-color: transparent;
 }
 
-.profile_details_drop .btn{
-	line-height: 1;
+.profile_details_drop .btn {
+  line-height: 1;
 }
 
-.navbar-bottom{
-	display: block !important;
+.navbar-bottom {
+  display: block !important;
 }
 
-#navbar-bottom-toggler{
-	border: 1px solid #212121 !important;
+#navbar-bottom-toggler {
+  border: 1px solid #212121 !important;
 }
 
-.nav-link, .mega-dropdown-menu{
-  color: #212121 !important;
-  padding: 10px 0px 10px 40px !important;
+.nav-link,
+.mega-dropdown-menu {
+  
+  padding: 10px 0px 10px 40px;
   border-bottom: 1px dotted #cdcdcd !important;
   font-size: 14px;
 }
 
-.nav-link:hover{
-  background-color: #84C639 !important;
+.nav_1 .nav-link:hover {
+  background-color: #84c639 !important;
   color: #fff !important;
 }
 
-.nav_1{
+.nav_1 {
   width: 100%;
 }
 
-.row{
-  margin-right:auto !important;
+.nav_1 .nav-link{
+  padding: 10px 0px 10px 40px !important;
+  color: #212121 !important;
+}
+
+.row {
+  margin-right: auto !important;
+}
+
+.panel > .panel-heading > button {
+  padding: 0;
+}
+
+/* .accordion-button::after{
+  content: none !important;
+} */
+
+.checkout-right>ul>li>.nav-link{
+  font-weight: 400 !important;
+  font-size: 20px !important;
+  letter-spacing: 2px !important;
+  color: #000;
+  padding: 13 px 15 px !important;
+  margin: 0 4 px 0 0 !important;
+  list-style: none;
+  cursor: pointer;
+  float: left;
+}
+
+.checkout-right .nav-link.active{
+  background-color: #2f2f2f !important;
+  color: #fff !important;
+}
+
+.resp-tabs-container{
+  border: 1px solid black;
+  padding: 25px 60px;
 }

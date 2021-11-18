@@ -16,6 +16,7 @@ import image72 from './images/72.png';
 import image73 from './images/73.png';
 import image74 from './images/74.png';
 import image75 from './images/75.png';
+import { Link } from "react-router-dom";
 
 function FrozenBannerRight() {
   return (
@@ -106,13 +107,13 @@ function FrozenBannerRight() {
                     <figure>
                       <div class="snipcart-item block">
                         <div class="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image64}
                               alt=" "
                               class="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>pepper salami (250 gm)</p>
                           <h4>
                             $10.00 <span>$12.00</span>
@@ -179,13 +180,13 @@ function FrozenBannerRight() {
                     <figure>
                       <div class="snipcart-item block">
                         <div class="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image65}
                               alt=" "
                               class="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>sumeru green pees (500 gm)</p>
                           <h4>
                             $9.00 <span>$11.00</span>
@@ -248,13 +249,13 @@ function FrozenBannerRight() {
                     <figure>
                       <div class="snipcart-item block">
                         <div class="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image66}
                               alt=" "
                               class="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>tikka chicken (300 gm)</p>
                           <h4>
                             $6.00 <span>$8.00</span>
@@ -317,13 +318,13 @@ function FrozenBannerRight() {
                     <figure>
                       <div class="snipcart-item block">
                         <div class="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image67}
                               alt=" "
                               class="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>mixed vegetables (500 gm)</p>
                           <h4>
                             $6.00 <span>$7.00</span>
@@ -395,13 +396,13 @@ function FrozenBannerRight() {
                     <figure>
                       <div class="snipcart-item block">
                         <div class="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image68}
                               alt=" "
                               class="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>mango pulp (800 gm)</p>
                           <h4>
                             $9.00 <span>$11.00</span>
@@ -465,13 +466,13 @@ function FrozenBannerRight() {
                     <figure>
                       <div class="snipcart-item block">
                         <div class="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image69}
                               alt=" "
                               class="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>kesar mango pulp (800 gm)</p>
                           <h4>
                             $5.00 <span>$8.00</span>
@@ -535,13 +536,13 @@ function FrozenBannerRight() {
                     <figure>
                       <div class="snipcart-item block">
                         <div class="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image70}
                               alt=" "
                               class="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>frozen sweet corn (250 gm)</p>
                           <h4>
                             $6.00 <span>$8.00</span>
@@ -605,13 +606,13 @@ function FrozenBannerRight() {
                     <figure>
                       <div class="snipcart-item block">
                         <div class="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image71}
                               alt=" "
                               class="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>chicken nuggets (1 kg)</p>
                           <h4>
                             $4.00 <span>$6.00</span>
@@ -683,13 +684,13 @@ function FrozenBannerRight() {
                     <figure>
                       <div class="snipcart-item block">
                         <div class="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image72}
                               alt=" "
                               class="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>garlic fingers (400 gm)</p>
                           <h4>
                             $5.00 <span>$7.00</span>
@@ -753,13 +754,13 @@ function FrozenBannerRight() {
                     <figure>
                       <div class="snipcart-item block">
                         <div class="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image73}
                               alt=" "
                               class="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>catch fish finger (200 gm)</p>
                           <h4>
                             $8.00 <span>$10.00</span>
@@ -823,13 +824,13 @@ function FrozenBannerRight() {
                     <figure>
                       <div class="snipcart-item block">
                         <div class="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image74}
                               alt=" "
                               class="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>sumeru chicken (500 ml)</p>
                           <h4>
                             $11.00 <span>$15.00</span>
@@ -897,13 +898,13 @@ function FrozenBannerRight() {
                     <figure>
                       <div class="snipcart-item block">
                         <div class="snipcart-thumb">
-                          <a href="single.html">
+                          <Link to="/single">
                             <Image fluid
                               src={image75}
                               alt=" "
                               class="img-responsive"
                             />
-                          </a>
+                          </Link>
                           <p>veggie fingers (400 gm)</p>
                           <h4>
                             $7.00 <span>$9.00</span>
