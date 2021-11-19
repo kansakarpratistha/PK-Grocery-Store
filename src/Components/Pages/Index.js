@@ -1,8 +1,8 @@
 // import { React, lazy, Suspense } from "react";
 import BannerLeft from "../BannerLeft";
 // import DynamicTitle from "../DynamicTitle";
-const TopBrands = lazy(() => import("../TopBrands"));
-const FreshVegetables = lazy(() => import("../FreshVegetables"));
+// const TopBrands = lazy(() => import("../TopBrands"));
+// const FreshVegetables = lazy(() => import("../FreshVegetables"));
 
 // const BannerRight = lazy(() => import("../BannerRight"));
 // const BannerBottom = lazy(() => import("../BannerBottom"));
