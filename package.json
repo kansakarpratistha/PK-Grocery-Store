@@ -1,6 +1,9 @@
 {
   "name": "grocery-store",
   "version": "0.1.0",
+  "engines": {
+    "node": "14.17.6"
+  },
   "private": true,
   "dependencies": {
     "@fontsource/open-sans": "^4.5.2",
