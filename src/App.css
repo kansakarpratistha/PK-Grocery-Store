@@ -2026,7 +2026,7 @@ h2.typoh2 {
   color: #212121;
   margin-bottom: 1em;
 }
-.privacy1-grid ul li i {
+.privacy1-grid ul li svg {
   color: #84c639;
   top: -0.5em;
 }
@@ -3406,7 +3406,7 @@ input.checkbox:checked:after {
   .map iframe {
     min-height: 300px;
   }
-  .privacy1-grid ul li i {
+  .privacy1-grid ul li svg {
     top: 0;
   }
   .privacy1-grid ul li:nth-child(2) {
@@ -5426,4 +5426,9 @@ input.checkbox:checked:after {
 .glide__arrows{
   display: flex;
   justify-content: space-between;
+}
+
+.loading-el{
+  text-align: center;
+  font-size: 25px;
 }

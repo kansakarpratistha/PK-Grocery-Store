@@ -1,24 +1,30 @@
-import React from "react";
+import { React, lazy, Suspense } from "react";
 import BannerLeft from "../BannerLeft";
-import BannerRight from "../BannerRight";
-import BannerBottom from "../BannerBottom";
-import TopBrands from "../TopBrands";
-import FreshVegetables from "../FreshVegetables";
+import DynamicTitle from "../DynamicTitle";
+const TopBrands = lazy(() => import("../TopBrands"));
+const FreshVegetables = lazy(() => import("../FreshVegetables"));
 
-function Index(){
-    return(
-        <>
-        <div className="banner">
-            <BannerLeft/>
-            <BannerRight/>
-            <div className="clearfix"></div>
-        </div>
-        <BannerBottom/>
+const BannerRight = lazy(() => import("../BannerRight"));
+const BannerBottom = lazy(() => import("../BannerBottom"));
+
+function Index() {
+  DynamicTitle("PK Grocery | Index");
+  return (
+    <>
+      <div className="banner">
+        <BannerLeft />
+        <Suspense fallback={<div className="loading-el">Loading...</div>}>
+          <BannerRight />
+        </Suspense>
+        <div className="clearfix"></div>
+      </div>
+      <Suspense fallback={<div className="loading-el">Loading...</div>}>
+        <BannerBottom />
         <TopBrands text="Top Brands" />
-        <FreshVegetables/>
-        </>
-        
-    );
+        <FreshVegetables />
+      </Suspense>
+    </>
+  );
 }
 
 export default Index;
