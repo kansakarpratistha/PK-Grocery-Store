@@ -5428,7 +5428,7 @@ input.checkbox:checked:after {
   justify-content: space-between;
 }
 
-.loading-el{
+/* .loading-el{
   text-align: center;
   font-size: 25px;
-}
+} */
