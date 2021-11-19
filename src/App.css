@@ -2299,10 +2299,10 @@ p.animi {
 .w3_testimonials_grids {
   margin: 3em 0 0;
 }
-.w3_testimonials_grid p i {
+.w3_testimonials_grid p svg {
   display: block;
   font-size: 1.5em;
-  padding: 0 2em 1em 0;
+  margin: 0 2em 1em 0;
   color: #84c639;
 }
 .w3_testimonials_grid {
@@ -5230,8 +5230,8 @@ input.checkbox:checked:after {
   .wthree_news_top_serv_btm_grid_icon svg {
     font-size: 1.5em;
   }
-  .w3_testimonials_grid p i {
-    padding: 0 2em 0.5em 0;
+  .w3_testimonials_grid p svg {
+    margin: 0 2em 0.5em 0;
   }
   .w3_testimonials_grid h4 {
     font-size: 0.9em;
@@ -5416,4 +5416,14 @@ input.checkbox:checked:after {
 .resp-tabs-container{
   border: 1px solid black;
   padding: 25px 60px;
+}
+
+#testimonial-slider-row{
+  width: 100% !important;
+}
+
+
+.glide__arrows{
+  display: flex;
+  justify-content: space-between;
 }
