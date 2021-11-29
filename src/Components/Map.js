@@ -1,10 +1,22 @@
 import React, { useState } from "react";
 import MapGL, { GeolocateControl } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-// import mapboxgl from 'mapbox-gl';
+// import MapboxWorker from 'worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker';
+// import ReactMapGL, { FlyToInterpolator, NavigationControl } from "react-map-gl";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+} from "@monsonjeremy/react-leaflet";
+import mapboxgl from "mapbox-gl";
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
+// mapboxgl.workerClass = MapboxWorker.default;
 
-const TOKEN = "pk.eyJ1IjoicHJhdGlzdGhhIiwiYSI6ImNrdGN0dDM0NTBnYTYyb21hdnpoeTZzNGcifQ.Kpw1PTL5VVUTbk0sNF5M3g";
-// mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
+const TOKEN =
+  "pk.eyJ1IjoicHJhdGlzdGhhIiwiYSI6ImNrdGN0dDM0NTBnYTYyb21hdnpoeTZzNGcifQ.Kpw1PTL5VVUTbk0sNF5M3g";
+
 const geolocateStyle = {
   float: "left",
   margin: "50px",
@@ -24,9 +36,20 @@ const Map = () => {
     setViewPort({ ...viewport, transitionDuration: 3000 });
 
   return (
-    <div style={{ margin: "0 auto" }}>
-
-      <MapGL
+    <div style={{ margin: "0 auto"}}>
+      <MapContainer center={[26.66537506918353, 87.27050627796757]} zoom={15} scrollWheelZoom={true}>
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={[26.66537506918353, 87.27050627796757]}>
+          <Popup>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
+        </Marker>
+      </MapContainer>
+      {/* {" "}
+      <ReactMapGL
         {...viewport}
         mapboxApiAccessToken={TOKEN}
         mapStyle="mapbox://styles/mapbox/dark-v8"
@@ -37,7 +60,8 @@ const Map = () => {
           positionOptions={{ enableHighAccuracy: true }}
           trackUserLocation={true}
         />
-      </MapGL>
+      </ReactMapGL>{" "}
+       */}
     </div>
   );
 };

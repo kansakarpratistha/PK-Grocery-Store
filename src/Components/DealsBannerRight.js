@@ -64,13 +64,12 @@ function DealsBannerRight() {
                   className="img-responsive"
                   fluid
                 />
-                {/* <div className="mask">
-                <h4>Grocery Store</h4>
+                <div className="mask">
+                <h4>{ad.title}</h4>
                 <p>
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                  qui officia deserunt.
+                  Get the best quality dishes. Healthy and tasty.
                 </p>
-              </div> */}
+              </div>
               </div>
               {/* <h4>Utensils</h4>
             <ol>
