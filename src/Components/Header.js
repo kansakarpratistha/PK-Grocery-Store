@@ -1,12 +1,10 @@
-import react from "react";
+import react, { useEffect, useState } from "react";
 // import './css/style.css';
 import { Link } from "react-router-dom";
 import { Container, Dropdown } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
-  faPhone,
-  faEnvelopeOpen,
   faCaretDown,
   faEnvelope,
   faPhoneAlt,
@@ -124,7 +122,7 @@ function Header() {
                 <i>/</i>
               </li>
               <li>
-                <Link to="/products">Best Deals</Link>
+                <Link to="/deals">Best Deals</Link>
                 <i>/</i>
               </li>
               <li>

@@ -1,23 +1,24 @@
 import { lazy, Suspense } from "react";
 import DynamicTitle from "../DynamicTitle";
+import React from "react";
 import BannerLeft from "../BannerLeft";
 import ProductBreadCrumb from "../ProductsBreadCrumb";
-const HouseholdBannerRight = lazy(()=>import("../HouseholdBannerRight"));
+const DealsBannerRight = lazy(() => import("../DealsBannerRight"));
 
-function HouseHold() {
-  DynamicTitle("PK Grocery | Household");
+function Deals() {
+  DynamicTitle("PK Grocery | Deals");
   return (
     <>
-      <ProductBreadCrumb text="Household" />
+      <ProductBreadCrumb text="Deals" />
       <div className="banner">
         <BannerLeft />
         <Suspense fallback={<div className="loading-el">Loading...</div>}>
-          <HouseholdBannerRight />
+          <DealsBannerRight />
         </Suspense>
-        <div className="clearfix"></div>
+        <div className="clearfix" />
       </div>
     </>
   );
 }
 
-export default HouseHold;
+export default Deals;

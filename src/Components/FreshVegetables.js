@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import image8 from "./images/8.jpg";
 import image7 from "./images/7.jpg";
 import image9 from "./images/9.jpg";
@@ -9,10 +9,34 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 function FreshVegetables() {
+  const [tags, setTags] = React.useState([]);
+  React.useEffect(() => {
+    const url = "https://uat.ordering-boafresh.ekbana.net/api/v4/newhome";
+    const headers = {
+      method: "GET",
+      headers: {
+        "Warehouse-id": "1",
+        "Api-key":
+          "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545",
+      },
+    };
+    const fetchData = async () => {
+      try {
+        const resp = await fetch(url, headers);
+        const json = await resp.json();
+        console.log(json.data[5].sectionDetails.tags)
+        setTags(json.data[5].sectionDetails.tags);
+      } catch (err) {
+        console.log("error", err);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <div className="fresh-vegetables">
       <Container>
-        <h3>Top Products</h3>
+        <h3>Buy From Our Favourite Tags</h3>
         <div className="w3l_fresh_vegetables_grids">
           <Row>
             <Col
@@ -21,46 +45,13 @@ function FreshVegetables() {
             >
               <div className="w3l_fresh_vegetables_grid2">
                 <ul>
-                  <li>
-                    <FontAwesomeIcon icon={faCheck} />
-                    <a href="products.html">All Brands</a>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faCheck} />
-                    <a href="vegetables.html">Vegetables</a>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faCheck} />
-                    <a href="vegetables.html">Fruits</a>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faCheck} />
-                    <a href="drinks.html">Juices</a>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faCheck} />
-                    <a href="pet.html">Pet Food</a>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faCheck} />
-                    <a href="bread.html">Bread & Bakery</a>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faCheck} />
-                    <a href="household.html">Cleaning</a>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faCheck} />
-                    <a href="products.html">Spices</a>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faCheck} />
-                    <a href="products.html">Dry Fruits</a>
-                  </li>
-                  <li>
-                    <FontAwesomeIcon icon={faCheck} />
-                    <a href="products.html">Dairy Products</a>
-                  </li>
+                  {tags.map((tag) => (
+                    <li>
+                      <FontAwesomeIcon icon={faCheck} />
+                      <a href="products.html" key={tag.id.toString()}>{tag.title}</a>
+                    </li>
+                  ))}
+                  
                 </ul>
               </div>
             </Col>

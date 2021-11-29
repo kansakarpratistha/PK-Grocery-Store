@@ -336,7 +336,7 @@ ul.dropdown-menu.drp-mnu li a i {
   margin-bottom: 5em;
 }
 .w3l_banner_nav_right_banner {
-  background: url(./Components/images/1.jpg) no-repeat 0px 0px;
+  /* background: url(./Components/images/1.jpg) no-repeat 0px 0px; */
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -344,24 +344,16 @@ ul.dropdown-menu.drp-mnu li a i {
   -ms-background-size: cover;
 }
 .w3l_banner_nav_right_banner1 {
-  background: url(./Components/images/2.jpg) no-repeat 0px 0px;
+  /* background: url(./Components/images/2.jpg) no-repeat 0px 0px; */
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   -ms-background-size: cover;
 }
-.w3l_banner_nav_right_banner2 {
-  background: url(./Components/images/3.jpg) no-repeat 0px 0px;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -ms-background-size: cover;
-}
+
 .w3l_banner_nav_right_banner h3,
-.w3l_banner_nav_right_banner1 h3,
-.w3l_banner_nav_right_banner2 h3 {
+.w3l_banner_nav_right_banner1 h3{
   font-size: 2em;
   color: #fff;
   font-weight: 300;
@@ -374,13 +366,13 @@ ul.dropdown-menu.drp-mnu li a i {
   font-weight: 600;
   line-height: 2em;
 }
-.w3l_banner_nav_right_banner2 h3 i {
+/* .w3l_banner_nav_right_banner2 h3 i { */
   /*-- agileits --*/
-  display: block;
+  /* display: block;
   font-weight: 600;
   line-height: 2em;
   color: #fa1818;
-}
+} */
 .more a {
   padding: 10px 30px;
   background: #84c639;
@@ -1316,7 +1308,7 @@ button.submit.check_out {
 .w3l_banner_nav_right_banner8,
 .w3l_banner_nav_right_banner9,
 .w3l_banner_nav_right_banner10 {
-  min-height: 300px;
+  min-height: 350px;
   padding-top: 7em;
 }
 .w3l_banner_nav_right_banner3 {
@@ -1328,7 +1320,7 @@ button.submit.check_out {
   -ms-background-size: cover;
 }
 .w3l_banner_nav_right_banner4 {
-  background: url(./Components/images/16.jpg) no-repeat 0px 0px;
+  
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1395,7 +1387,7 @@ button.submit.check_out {
   color: #fa1818;
   text-transform: capitalize;
   padding: 0.3em 0.5em;
-  background: #fff;
+  background: #f8ece4;
   width: 37%;
   margin-left: 10em;
   font-weight: 300;
@@ -3155,7 +3147,7 @@ input.checkbox:checked:after {
   .w3l_banner_nav_right_banner8 h3,
   .w3l_banner_nav_right_banner9 h3,
   .w3l_banner_nav_right_banner10 h3 {
-    margin-left: 8em;
+    margin-left: 0;
   }
   .view p {
     padding: 10px 25px 0px;
@@ -3436,7 +3428,7 @@ input.checkbox:checked:after {
   .w3l_banner_nav_right_banner8 h3,
   .w3l_banner_nav_right_banner9 h3,
   .w3l_banner_nav_right_banner10 h3 {
-    margin-left: 7em;
+    margin-left: 0;
   }
   .w3l_banner_nav_right_banner3_btml h4 {
     font-size: 1.3em;
@@ -3864,7 +3856,7 @@ input.checkbox:checked:after {
   .w3l_banner_nav_right_banner10 h3 {
     font-size: 1.4em;
     width: 65%;
-    margin-left: 5em;
+    margin-left: 0;
   }
   .w3l_banner_nav_right_banner3_btml {
     width: 68%;
@@ -4461,7 +4453,7 @@ input.checkbox:checked:after {
   .w3l_banner_nav_right_banner10 h3 {
     font-size: 1.2em;
     width: 75%;
-    margin-left: 3em;
+    margin-left: 0em;
   }
   .w3l_banner_nav_right_banner3 span,
   .w3l_banner_nav_right_banner4 span,
@@ -5427,8 +5419,13 @@ input.checkbox:checked:after {
   display: flex;
   justify-content: space-between;
 }
-
-/* .loading-el{
-  text-align: center;
-  font-size: 25px;
-} */
+.carousel-indicators [data-bs-target]{
+  background-color: rgb(87, 206, 63) !important;
+}
+.top-brands > *:not(:last-child) {
+    display: block;
+    margin-bottom: 90px; 
+} 
+.top-brands .col-md-3:not(:last-child), .w3ls_w3l_banner_nav_right_grid1 .col-md-3:not(:last-child){
+  margin-bottom: 30px;
+}

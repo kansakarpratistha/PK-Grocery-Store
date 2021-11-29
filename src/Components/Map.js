@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import MapGL, { GeolocateControl } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+// import mapboxgl from 'mapbox-gl';
 
 const TOKEN = "pk.eyJ1IjoicHJhdGlzdGhhIiwiYSI6ImNrdGN0dDM0NTBnYTYyb21hdnpoeTZzNGcifQ.Kpw1PTL5VVUTbk0sNF5M3g";
-
+// mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 const geolocateStyle = {
   float: "left",
   margin: "50px",

@@ -9,6 +9,7 @@ import { Form } from "react-bootstrap";
 
 function LoginBannerRight() {
   const [item, setItem] = React.useState(true);
+  
   const handleitem = () => {
     setItem(!item);
   };
@@ -23,6 +24,8 @@ function LoginBannerRight() {
       formEl2.style.display = "block";
     }
   });
+
+
   const toggleFunction = (toggleEl) => {
     console.log(toggleEl.children);
 

@@ -12,9 +12,7 @@ import Footer from "./Components/Footer";
 import Login from "./Components/Pages/Login";
 import Newsletter from "./Components/Newsletter";
 import Mail from "./Components/Pages/Mail";
-import Products from "./Components/Pages/Products";
 import Services from "./Components/Pages/Services";
-import HouseHold from "./Components/Pages/Household";
 import Vegetables from "./Components/Pages/Vegetables";
 import Kitchen from "./Components/Pages/Kitchen";
 import FrozenFood from "./Components/Pages/FrozenFood";
@@ -25,6 +23,8 @@ import Faq from "./Components/Pages/Faq";
 import Single from "./Components/Pages/Single";
 import Checkout from "./Components/Pages/Checkout";
 import Payment from "./Components/Pages/Payment";
+import Deals from './Components/Pages/Deals';
+import Products from './Components/Pages/Products';
 
 function App() {
   return (
@@ -37,9 +37,9 @@ function App() {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<Mail />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/deals" element={<Deals />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/household" element={<HouseHold />} />
+        <Route path="/category/:id" element={<Products />} />
         <Route path="/vegetables" element={<Vegetables />} />
         <Route path="/kitchen" element={<Kitchen />} />
         <Route path="/frozen" element={<FrozenFood />} />
