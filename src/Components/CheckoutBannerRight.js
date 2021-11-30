@@ -1,10 +1,172 @@
+import React from "react";
 import { Table, Image, Row, Col, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { increaseProductQuanity, updateCart } from "./CartFunctions";
 import image1 from "./images/1.png";
 import image2 from "./images/2.png";
 import image3 from "./images/3.png";
 
 function CheckoutBannerRight() {
+  const [cart, setCart] = React.useState({});
+  const [cartProducts, setCartProducts] = React.useState([]);
+  const accessToken = localStorage.getItem("accessToken");
+
+  const getCart = () => {
+    const url = "https://uat.ordering-boafresh.ekbana.net//api/v4/cart";
+    const headers = {
+      method: "GET",
+      headers: {
+        "Api-key":
+          "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545",
+        Authorization: "Bearer " + accessToken,
+        "Warehouse-Id": "1",
+      },
+    };
+    const fetchCart = async () => {
+      try {
+        const resp = await fetch(url, headers);
+        const json = await resp.json();
+        if (resp.status === 200) {
+          setCart(json.data);
+          setCartProducts(json.data.cartProducts);
+        } else {
+          throw json.errors[0];
+        }
+        // console.log(json.data.cartProducts);
+      } catch (err) {
+        console.log(err);
+        alert("Failed: " + err);
+      }
+    };
+
+    fetchCart();
+  };
+
+  const increaseProductQuanity = (e, cartProdId, quantity) => {
+    e.preventDefault();
+    const url =
+      "https://uat.ordering-boafresh.ekbana.net//api/v4/cart-product/" +
+      cartProdId;
+    const headers = {
+      method: "PATCH",
+      headers: {
+        "Api-key":
+          "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545",
+        Authorization: "Bearer " + accessToken,
+        "Warehouse-Id": "1",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        quantity: quantity + 1,
+      }),
+    };
+    const updateProduct = async () => {
+      try {
+        const resp = await fetch(url, headers);
+        const json = await resp.json();
+        if (resp.status === 200) {
+          getCart();
+          alert("Cart updated!");
+          const data = await json.data;
+          // window.location.reload();
+          return resp.status;
+        } else {
+          throw json.errors[0].message;
+        }
+      } catch (err) {
+        console.log("Failed: ", err);
+      }
+    };
+
+    updateProduct();
+  };
+
+  const decreaseProductQuanity = (e, cartProdId, quantity) => {
+    e.preventDefault();
+    if (quantity === 1) {
+      deleteCartProduct(e, cartProdId);
+    } else {
+      const url =
+        "https://uat.ordering-boafresh.ekbana.net//api/v4/cart-product/" +
+        cartProdId;
+      const headers = {
+        method: "PATCH",
+        headers: {
+          "Api-key":
+            "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545",
+          Authorization: "Bearer " + accessToken,
+          "Warehouse-Id": "1",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          quantity: quantity - 1,
+        }),
+      };
+      const updateProduct = async () => {
+        try {
+          const resp = await fetch(url, headers);
+          const json = await resp.json();
+          if (resp.status === 200) {
+            getCart();
+            alert("Cart updated!");
+            const data = await json.data;
+            return resp.status;
+          } else {
+            throw json.errors[0].message;
+          }
+        } catch (err) {
+          console.log("Failed: ", err);
+        }
+      };
+
+      updateProduct();
+    }
+  };
+
+  const deleteCartProduct = (e, cartProdId) => {
+    e.preventDefault();
+    const accessToken = localStorage.getItem("accessToken");
+    const url =
+      "https://uat.ordering-boafresh.ekbana.net//api/v4/cart-product/" +
+      cartProdId;
+    const headers = {
+      method: "DELETE",
+      headers: {
+        "Api-key":
+          "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545",
+        Authorization: "Bearer " + accessToken,
+        "Warehouse-Id": "1",
+      },
+    };
+    const deleteProduct = async () => {
+      try {
+        const resp = await fetch(url, headers);
+
+        if (resp.status === 204) {
+          getCart();
+          alert("Cart updated!");
+          // const data = await json.data;
+          return resp.status;
+        } else {
+          const json = await resp.json();
+          throw json.errors[0].message;
+        }
+      } catch (err) {
+        console.log("Failed: ", err);
+      }
+    };
+
+    deleteProduct();
+  };
+
+  React.useEffect(() => {
+    // console.log("add to cart clicked!")
+    if (accessToken) {
+      getCart();
+    } else {
+      window.location.href = "./login";
+    }
+  }, []);
   return (
     <div className="w3l_banner_nav_right">
       <div className="privacy about">
@@ -14,50 +176,85 @@ function CheckoutBannerRight() {
 
         <div className="checkout-right">
           <h4>
-            Your shopping cart contains: <span>3 Products</span>
+            Your shopping cart contains:{" "}
+            <span>{cartProducts.length} products</span>
           </h4>
           <Table className="timetable_sub">
             <thead>
               <tr>
                 <th>SL No.</th>
-                <th>Product</th>
-                <th>Quality</th>
+                <th>Quantity</th>
                 <th>Product Name</th>
-
-                <th>Price</th>
+                <th>Unit Price</th>
+                <th>Line Total</th>
                 <th>Remove</th>
               </tr>
             </thead>
             <tbody>
-              <tr className="rem1">
-                <td className="invert">1</td>
-                <td className="invert-image">
+              {cartProducts.map((product) => (
+                <tr className="rem1">
+                  <td className="invert">
+                    {cartProducts.indexOf(product) + 1}
+                  </td>
+                  {/* <td className="invert-image">
                   <Link to="/single">
                     {" "}
                     <Image fluid src={image1} alt=" " className="img-responsive" />
                   </Link>
-                </td>
-                <td className="invert">
-                  <div className="quantity">
-                    <div className="quantity-select">
-                      <div className="entry value-minus">&nbsp;</div>
-                      <div className="entry value">
-                        <span>1</span>
+                </td> */}
+                  <td className="invert">
+                    <div className="quantity">
+                      <div className="quantity-select">
+                        <div
+                          className="entry value-minus"
+                          onClick={(e) =>
+                            decreaseProductQuanity(
+                              e,
+                              product.id,
+                              product.quantity
+                            )
+                          }
+                        >
+                          &nbsp;
+                        </div>
+                        <div className="entry value">
+                          <span>{product.quantity}</span>
+                        </div>
+                        <div
+                          className="entry value-plus active"
+                          onClick={(e) =>
+                            increaseProductQuanity(
+                              e,
+                              product.id,
+                              product.quantity
+                            )
+                          }
+                        >
+                          &nbsp;
+                        </div>
                       </div>
-                      <div className="entry value-plus active">&nbsp;</div>
                     </div>
-                  </div>
-                </td>
-                <td className="invert">Fortune Sunflower Oil</td>
+                  </td>
+                  <td className="invert">{product.product.title}</td>
 
-                <td className="invert">$290.00</td>
-                <td className="invert">
-                  <div className="rem">
-                    <div className="close1"> </div>
-                  </div>
-                </td>
-              </tr>
-              <tr className="rem2">
+                  <td className="invert">
+                    Rs {product.product.unitPrice[0].sellingPrice}
+                  </td>
+                  <td className="invert">Rs {product.price}</td>
+                  <td className="invert">
+                    <div className="rem">
+                      <div
+                        className="close1"
+                        onClick={(e) => deleteCartProduct(e, product.id)}
+                      >
+                        {" "}
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+
+              {/* <tr className="rem2">
                 <td className="invert">2</td>
                 <td className="invert-image">
                   <Link to="/single">
@@ -84,35 +281,7 @@ function CheckoutBannerRight() {
                     <div className="close2"> </div>
                   </div>
                 </td>
-              </tr>
-              <tr className="rem3">
-                <td className="invert">3</td>
-                <td className="invert-image">
-                  <Link to="/single">
-                    {" "}
-                    <Image fluid src={image2} alt=" " className="img-responsive" />
-                  </Link>
-                </td>
-                <td className="invert">
-                  <div className="quantity">
-                    <div className="quantity-select">
-                      <div className="entry value-minus">&nbsp;</div>
-                      <div className="entry value">
-                        <span>1</span>
-                      </div>
-                      <div className="entry value-plus active">&nbsp;</div>
-                    </div>
-                  </div>
-                </td>
-                <td className="invert">Pepsi Soft Drink (2 Ltr)</td>
-
-                <td className="invert">$15.00</td>
-                <td className="invert">
-                  <div className="rem">
-                    <div className="close3"> </div>
-                  </div>
-                </td>
-              </tr>
+              </tr> */}
             </tbody>
           </Table>
         </div>
@@ -121,20 +290,20 @@ function CheckoutBannerRight() {
             <Col md={4} className="checkout-left-basket">
               <h4>Continue to basket</h4>
               <ul>
+                {cartProducts.map((product) => (
+                  <li>
+                    {product.product.title} <i>-</i>{" "}
+                    <span>Rs {product.price} </span>
+                  </li>
+                ))}
                 <li>
-                  Product1 <i>-</i> <span>$15.00 </span>
+                  Sub-Total <i>-</i> <span>Rs {cart.subTotal}</span>
                 </li>
                 <li>
-                  Product2 <i>-</i> <span>$25.00 </span>
+                  Delivery Charge <i>-</i> <span>Rs {cart.deliveryCharge}</span>
                 </li>
                 <li>
-                  Product3 <i>-</i> <span>$29.00 </span>
-                </li>
-                <li>
-                  Total Service Charges <i>-</i> <span>$15.00</span>
-                </li>
-                <li>
-                  Total <i>-</i> <span>$84.00</span>
+                  Total <i>-</i> <span>Rs {cart.total}</span>
                 </li>
               </ul>
             </Col>
@@ -149,7 +318,9 @@ function CheckoutBannerRight() {
                   <div className="information-wrapper">
                     <div className="first-row form-group">
                       <div className="controls">
-                        <Form.Label className="control-label">Full name: </Form.Label>
+                        <Form.Label className="control-label">
+                          Full name:{" "}
+                        </Form.Label>
                         <Form.Control
                           className="billing-address-name form-control"
                           type="text"
@@ -160,7 +331,9 @@ function CheckoutBannerRight() {
                       <div className="w3_agileits_card_number_grids">
                         <div className="w3_agileits_card_number_grid_left">
                           <div className="controls">
-                            <Form.Label className="control-label">Mobile number:</Form.Label>
+                            <Form.Label className="control-label">
+                              Mobile number:
+                            </Form.Label>
                             <input
                               className="form-control"
                               type="text"
@@ -170,7 +343,9 @@ function CheckoutBannerRight() {
                         </div>
                         <div className="w3_agileits_card_number_grid_right">
                           <div className="controls">
-                            <Form.Label className="control-label">Landmark: </Form.Label>
+                            <Form.Label className="control-label">
+                              Landmark:{" "}
+                            </Form.Label>
                             <Form.Control
                               className="form-control"
                               type="text"
@@ -181,7 +356,9 @@ function CheckoutBannerRight() {
                         <div className="clear"> </div>
                       </div>
                       <div className="controls">
-                        <Form.Label className="control-label">Town/City: </Form.Label>
+                        <Form.Label className="control-label">
+                          Town/City:{" "}
+                        </Form.Label>
                         <Form.Control
                           className="form-control"
                           type="text"
@@ -189,7 +366,9 @@ function CheckoutBannerRight() {
                         />
                       </div>
                       <div className="controls">
-                        <Form.Label className="control-label">Address type: </Form.Label>
+                        <Form.Label className="control-label">
+                          Address type:{" "}
+                        </Form.Label>
                         <Form.Select className="form-control option-w3ls">
                           <option>Office</option>
                           <option>Home</option>

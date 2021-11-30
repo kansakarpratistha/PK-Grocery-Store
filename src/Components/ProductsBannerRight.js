@@ -15,11 +15,16 @@ import image25 from "./images/25.png";
 import image26 from "./images/26.png";
 import image27 from "./images/27.png";
 import image28 from "./images/28.png";
+import { addToCart, addNew, updateCart } from "./CartFunctions";
+
+
+
 
 function ProductsBannerRight(props) {
   const [banner, setBanner] = React.useState("");
   const [products, setProducts] = React.useState([]);
   const id = props.categoryId;
+  
 
   // const [carousel, setCarousel] = React.useState([]);
   React.useEffect(() => {
@@ -63,11 +68,11 @@ function ProductsBannerRight(props) {
       try {
         const resp = await fetch(url, headers);
         const json = await resp.json();
-        console.log(json.data);
+        // console.log(json.data);
         const categoryProducts = json.data.filter(
           (product) => product.categoryId.toString() === id
         );
-        console.log(categoryProducts);
+        // console.log(categoryProducts);
         setProducts(categoryProducts);
       } catch (err) {
         console.log("error", err);
@@ -76,6 +81,9 @@ function ProductsBannerRight(props) {
 
     fetchData();
   }, []);
+
+  
+
   return (
     <div className="w3l_banner_nav_right">
       <div
@@ -97,7 +105,6 @@ function ProductsBannerRight(props) {
                 <div className="hover14 column">
                   <div className="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
                     {product.hasOffer === true ? (
-                      
                       <div className="agile_top_brand_left_grid_pos">
                         {/* <h2>Has offer</h2> */}
                         <Image
@@ -123,19 +130,19 @@ function ProductsBannerRight(props) {
                               />
                             </Link>
                             <p>{product.title}</p>
-                            {product.unitPrice[0].newPrice === 0 ? (
+                            {/* {product.unitPrice[0].newPrice === 0 ? ( */}
                               <h4>Rs {product.unitPrice[0].sellingPrice}</h4>
-                            ) : (
+                            {/* ) : (
                               <h4>
                                 Rs {product.unitPrice[0].newPrice}{" "}
                                 <span>Rs {product.unitPrice[0].oldPrice}</span>
                               </h4>
-                            )}
+                            )} */}
                           </div>
                           <div className="snipcart-details">
-                            <form action="#" method="post">
+                            <form onSubmit={(e) => addToCart(e, product.id)}>
                               <fieldset>
-                                <input type="hidden" name="cmd" value="_cart" />
+                                {/* <input type="hidden" name="cmd" value="_cart" />
                                 <input type="hidden" name="add" value="1" />
                                 <input
                                   type="hidden"
@@ -167,7 +174,7 @@ function ProductsBannerRight(props) {
                                   type="hidden"
                                   name="cancel_return"
                                   value=" "
-                                />
+                                /> */}
                                 <input
                                   type="submit"
                                   name="submit"

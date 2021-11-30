@@ -7,6 +7,7 @@ import offer from "./images/offer.png";
 import image2 from "./images/2.png";
 import image4 from "./images/4.png";
 import { Link } from "react-router-dom";
+import { addToCart } from "./CartFunctions";
 
 function TopBrands(props) {
   const [newDishes, setNewDishes] = React.useState([]);
@@ -62,53 +63,20 @@ function TopBrands(props) {
                               />
                             </Link>
                             <p>{product.title}</p>
-                            {product.unitPrice[0].newPrice === 0 ? (
+                            {/* {product.unitPrice[0].newPrice === 0 ? ( */}
                               <h4>Rs {product.unitPrice[0].sellingPrice}</h4>
-                            ) : (
+                            {/* ) : (
                               <h4>
                                 Rs {product.unitPrice[0].newPrice}
                                 <span>
                                   Rs {product.unitPrice[0].sellingPrice}
                                 </span>
                               </h4>
-                            )}
+                            )} */}
                           </div>
                           <div className="snipcart-details top_brand_home_details">
-                            <form action="checkout.html" method="post">
+                            <form onSubmit={(e) => addToCart(e, product.id)}>
                               <fieldset>
-                                <input type="hidden" name="cmd" value="_cart" />
-                                <input type="hidden" name="add" value="1" />
-                                <input
-                                  type="hidden"
-                                  name="business"
-                                  value=" "
-                                />
-                                <input
-                                  type="hidden"
-                                  name="item_name"
-                                  value="Fortune Sunflower Oil"
-                                />
-                                <input
-                                  type="hidden"
-                                  name="amount"
-                                  value="7.99"
-                                />
-                                <input
-                                  type="hidden"
-                                  name="discount_amount"
-                                  value="1.00"
-                                />
-                                <input
-                                  type="hidden"
-                                  name="currency_code"
-                                  value="USD"
-                                />
-                                <input type="hidden" name="return" value=" " />
-                                <input
-                                  type="hidden"
-                                  name="cancel_return"
-                                  value=" "
-                                />
                                 <input
                                   type="submit"
                                   name="submit"
@@ -125,7 +93,6 @@ function TopBrands(props) {
                 </div>
               </Col>
             ))}
-            
           </Row>
 
           <div className="clearfix"> </div>
@@ -167,41 +134,8 @@ function TopBrands(props) {
                             )}
                           </div>
                           <div className="snipcart-details top_brand_home_details">
-                            <form action="checkout.html" method="post">
+                            <form onSubmit={(e) => addToCart(e, product.id)}>
                               <fieldset>
-                                <input type="hidden" name="cmd" value="_cart" />
-                                <input type="hidden" name="add" value="1" />
-                                <input
-                                  type="hidden"
-                                  name="business"
-                                  value=" "
-                                />
-                                <input
-                                  type="hidden"
-                                  name="item_name"
-                                  value="Fortune Sunflower Oil"
-                                />
-                                <input
-                                  type="hidden"
-                                  name="amount"
-                                  value="7.99"
-                                />
-                                <input
-                                  type="hidden"
-                                  name="discount_amount"
-                                  value="1.00"
-                                />
-                                <input
-                                  type="hidden"
-                                  name="currency_code"
-                                  value="USD"
-                                />
-                                <input type="hidden" name="return" value=" " />
-                                <input
-                                  type="hidden"
-                                  name="cancel_return"
-                                  value=" "
-                                />
                                 <input
                                   type="submit"
                                   name="submit"
@@ -218,7 +152,6 @@ function TopBrands(props) {
                 </div>
               </Col>
             ))}
-            
           </Row>
 
           <div className="clearfix"> </div>
@@ -248,7 +181,6 @@ function TopBrands(props) {
                               />
                             </Link>
                             <p>{category.title}</p>
-                            
                           </div>
                         </div>
                       </figure>
@@ -257,7 +189,6 @@ function TopBrands(props) {
                 </div>
               </Col>
             ))}
-            
           </Row>
 
           <div className="clearfix"> </div>

@@ -11,6 +11,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
+  // const [isAuthenticated, setIsAuthenticated] = useState(false);
+  let token = localStorage.getItem("accessToken");
+
   return (
     <>
       <div className="agileits_header">
@@ -35,12 +38,14 @@ function Header() {
             <fieldset>
               <input type="hidden" name="cmd" value="_cart" />
               <input type="hidden" name="display" value="1" />
-              <input
-                type="submit"
-                name="submit"
-                value="View your cart"
-                className="button"
-              />
+              <Link to="/checkout">
+                <input
+                  type="submit"
+                  name="submit"
+                  value="View your cart"
+                  className="button"
+                />
+              </Link>
             </fieldset>
           </form>
         </div>
@@ -53,12 +58,20 @@ function Header() {
               </span>
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item id="profileList" className="drp-mnu">
-                <Link to="/login">Login</Link>
-              </Dropdown.Item>
-              <Dropdown.Item id="profileList">
-                <Link to="/login">Sign Up</Link>
-              </Dropdown.Item>
+              {token ? (
+                <Dropdown.Item id="profileList" className="drp-mnu">
+                  <Link to="/logout">Logout</Link>
+                </Dropdown.Item>
+              ) : (
+                <>
+                  <Dropdown.Item id="profileList" className="drp-mnu">
+                    <Link to="/login">Login</Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item id="profileList">
+                    <Link to="/login">Sign Up</Link>
+                  </Dropdown.Item>
+                </>
+              )}
             </Dropdown.Menu>
           </Dropdown>
           {/* <ul>

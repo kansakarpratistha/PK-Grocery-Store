@@ -24,8 +24,8 @@ function FreshVegetables() {
       try {
         const resp = await fetch(url, headers);
         const json = await resp.json();
-        console.log(json.data[5].sectionDetails.tags)
-        setTags(json.data[5].sectionDetails.tags);
+        // console.log(json.data[4].sectionDetails.tags)
+        setTags(json.data[1].categories);
       } catch (err) {
         console.log("error", err);
       }
@@ -48,7 +48,7 @@ function FreshVegetables() {
                   {tags.map((tag) => (
                     <li>
                       <FontAwesomeIcon icon={faCheck} />
-                      <a href="products.html" key={tag.id.toString()}>{tag.title}</a>
+                      <a key={tag.id.toString()} disabled>{tag.title}</a>
                     </li>
                   ))}
                   

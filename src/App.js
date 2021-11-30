@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from "./logo.svg";
 import "./App.css";
 import "@fontsource/ubuntu";
 import "@fontsource/open-sans";
@@ -23,8 +23,10 @@ import Faq from "./Components/Pages/Faq";
 import Single from "./Components/Pages/Single";
 import Checkout from "./Components/Pages/Checkout";
 import Payment from "./Components/Pages/Payment";
-import Deals from './Components/Pages/Deals';
-import Products from './Components/Pages/Products';
+import Deals from "./Components/Pages/Deals";
+import Products from "./Components/Pages/Products";
+import Logout from "./Components/Pages/Logout";
+import ForgotPassword from "./Components/Pages/ForgotPassword";
 
 function App() {
   return (
@@ -50,6 +52,8 @@ function App() {
         <Route path="/single" element={<Single />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="/forgotPassword" element={<ForgotPassword />} />
       </Routes>
       <Newsletter />
       <Footer />
