@@ -27,6 +27,7 @@ import Deals from "./Components/Pages/Deals";
 import Products from "./Components/Pages/Products";
 import Logout from "./Components/Pages/Logout";
 import ForgotPassword from "./Components/Pages/ForgotPassword";
+import MyProfile from "./Components/Pages/MyProfile";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/forgotPassword" element={<ForgotPassword />} />
+        <Route path="/myProfile" element={<MyProfile />} />
       </Routes>
       <Newsletter />
       <Footer />

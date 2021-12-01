@@ -59,53 +59,26 @@ function Header() {
             </Dropdown.Toggle>
             <Dropdown.Menu>
               {token ? (
-                <Dropdown.Item id="profileList" className="drp-mnu">
-                  <Link to="/logout">Logout</Link>
-                </Dropdown.Item>
+                <>
+                  <Dropdown.Item id="profileList" className="drp-mnu">
+                    <Link to="/myProfile">My Profile</Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item id="profileList" className="drp-mnu">
+                    <Link to="/logout">Logout</Link>
+                  </Dropdown.Item>
+                </>
               ) : (
                 <>
                   <Dropdown.Item id="profileList" className="drp-mnu">
                     <Link to="/login">Login</Link>
                   </Dropdown.Item>
-                  <Dropdown.Item id="profileList">
+                  <Dropdown.Item id="profileList" className="drp-mnu">
                     <Link to="/login">Sign Up</Link>
                   </Dropdown.Item>
                 </>
               )}
             </Dropdown.Menu>
           </Dropdown>
-          {/* <ul>
-            <li className={`profile_details_drop ${<Dropdown/>}`}>
-              <Dropdown>
-                <Link to="/" className="dropdown-toggle" data-toggle="dropdown">
-                  <Dropdown.Toggle>
-                    <FontAwesomeIcon icon={faUser} />
-                    <span>
-                      <FontAwesomeIcon icon={faCaretDown}></FontAwesomeIcon>
-                    </span>
-                  </Dropdown.Toggle>
-                </Link>
-                <div className="mega-dropdown-menu">
-                  <div className="w3ls_vegetables">
-                    <ul className="dropdown-menu drp-mnu">
-                      <Dropdown.Menu className="drp-mnu">
-                        <li>
-                          <Link to="/login">
-                            <Dropdown.Item>Login</Dropdown.Item>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/">
-                            <Dropdown.Item>Sign Up</Dropdown.Item>
-                          </Link>
-                        </li>
-                      </Dropdown.Menu>
-                    </ul>
-                  </div>
-                </div>
-              </Dropdown>
-            </li>
-          </ul> */}
         </div>
         <div className="w3l_header_right1">
           <h2>

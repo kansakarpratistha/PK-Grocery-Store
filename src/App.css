@@ -5450,6 +5450,58 @@ input.checkbox:checked:after {
   height: 100vh;
 }
 
-#forgot-pw-form{
+#forgot-pw-form, #profile-updt-form, #pw-change-form
+{
   display: block;
+}
+
+/* my profile display styling */
+.card {
+    width: 350px;
+    background-color: #efefef;
+    border: none;
+    /* cursor: pointer; */
+    transition: all 0.5s
+}
+
+.image img {
+    transition: all 0.5s
+}
+
+.card:hover .image img {
+    transform: scale(1.2)
+}
+
+/* .btn {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%
+} */
+
+.name {
+    font-size: 22px;
+    font-weight: bold
+}
+
+.idd {
+    font-size: 16px;
+    font-weight: 600
+}
+
+.idd1 {
+    font-size: 14px
+}
+
+.join {
+    font-size: 12px;
+    color: #a0a0a0;
+    font-weight: bold
+}
+
+.date {
+    background-color: #ccc
+}
+
+.idd svg{
+  margin-right: 4px;
 }
