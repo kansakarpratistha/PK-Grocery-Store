@@ -11,30 +11,35 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
-  // const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [searchKey, setSearchKey] = useState("");
   let token = localStorage.getItem("accessToken");
+
+  const searchProducts=(evt)=>{
+    evt.preventDefault();
+    window.location.href = '/product-search/'+searchKey;
+  }
+  
 
   return (
     <>
       <div className="agileits_header">
         <div className="w3l_offers">
-          <Link to="/products">Today's special Offers</Link>
+          <Link to="/deals">Today's special Offers</Link>
         </div>
         <div className="w3l_search">
-          <form action="#" method="post">
+          <form onSubmit={searchProducts}>
             <input
               type="text"
               name="Product"
-              value="Search a product..."
-              onfocus="this.value = '';"
-              onblur="if (this.value == '') {this.value = 'Search a product...';}"
+              placeholder="Search a product..."
               required=""
+              onChange={(e)=>setSearchKey(e.target.value)}
             />
             <input type="submit" value=" " />
           </form>
         </div>
         <div className="product_list_header">
-          <form action="#" method="post" className="last">
+          <form action="#" className="last">
             <fieldset>
               <input type="hidden" name="cmd" value="_cart" />
               <input type="hidden" name="display" value="1" />

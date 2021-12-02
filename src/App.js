@@ -13,12 +13,6 @@ import Login from "./Components/Pages/Login";
 import Newsletter from "./Components/Newsletter";
 import Mail from "./Components/Pages/Mail";
 import Services from "./Components/Pages/Services";
-import Vegetables from "./Components/Pages/Vegetables";
-import Kitchen from "./Components/Pages/Kitchen";
-import FrozenFood from "./Components/Pages/FrozenFood";
-import Beverages from "./Components/Pages/Beverages";
-import PetFood from "./Components/Pages/PetFood";
-import Bread from "./Components/Pages/Bread";
 import Faq from "./Components/Pages/Faq";
 import Single from "./Components/Pages/Single";
 import Checkout from "./Components/Pages/Checkout";
@@ -28,6 +22,7 @@ import Products from "./Components/Pages/Products";
 import Logout from "./Components/Pages/Logout";
 import ForgotPassword from "./Components/Pages/ForgotPassword";
 import MyProfile from "./Components/Pages/MyProfile";
+import ProductSearch from "./Components/Pages/ProductSearch";
 
 function App() {
   return (
@@ -43,12 +38,6 @@ function App() {
         <Route path="/deals" element={<Deals />} />
         <Route path="/services" element={<Services />} />
         <Route path="/category/:id" element={<Products />} />
-        <Route path="/vegetables" element={<Vegetables />} />
-        <Route path="/kitchen" element={<Kitchen />} />
-        <Route path="/frozen" element={<FrozenFood />} />
-        <Route path="/beverages" element={<Beverages />} />
-        <Route path="/pet" element={<PetFood />} />
-        <Route path="/bread" element={<Bread />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/single" element={<Single />} />
         <Route path="/checkout" element={<Checkout />} />
@@ -56,6 +45,7 @@ function App() {
         <Route path="/logout" element={<Logout />} />
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/myProfile" element={<MyProfile />} />
+        <Route path="/product-search/:searchKey" element={<ProductSearch />} />
       </Routes>
       <Newsletter />
       <Footer />

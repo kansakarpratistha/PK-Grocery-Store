@@ -34,7 +34,7 @@ function Products(props) {
     };
 
     fetchData();
-  }, []);
+  }, [id]);
 
   // console.log(id)
   DynamicTitle("PK Grocery | "+category.title);

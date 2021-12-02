@@ -10,8 +10,32 @@ import {
   faDribbble,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import React from "react";
 
 function Footer() {
+  const [categories, setCategories] = React.useState([]);
+  React.useEffect(() => {
+    const url = "https://uat.ordering-boafresh.ekbana.net/api/v4/category";
+    const headers = {
+      method: "GET",
+      headers: {
+        "Warehouse-id": "1",
+        "Api-key":
+          "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545",
+      },
+    };
+    const fetchData = async () => {
+      try {
+        const resp = await fetch(url, headers);
+        const json = await resp.json();
+        setCategories(json.data);
+      } catch (err) {
+        console.log("error", err);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <div className="footer">
       <Container>
@@ -26,7 +50,7 @@ function Footer() {
                 <Link to="/about">About Us</Link>
               </li>
               <li>
-                <Link to="/products">Best Deals</Link>
+                <Link to="/deals">Best Deals</Link>
               </li>
               <li>
                 <Link to="/services">Services</Link>
@@ -53,21 +77,24 @@ function Footer() {
           <Col className="w3_footer_grid" md={3}>
             <h3>what in stores</h3>
             <ul className="w3_footer_grid_list">
-              <li>
-                <Link to="/pet">Pet Food</Link>
-              </li>
-              <li>
-                <Link to="frozen">Frozen Snacks</Link>
-              </li>
-              <li>
-                <Link to="/kitchen">Kitchen</Link>
-              </li>
-              <li>
-                <Link to="/products">Branded Foods</Link>
-              </li>
-              <li>
-                <Link to="/household">Households</Link>
-              </li>
+              {/* categories */}
+              {categories.map((category) => {
+                if (category.subcategories.length === 0) {
+                  return (
+                    <li>
+                      <Link to={"/category/"+category.id}>
+                        {category.title}
+                      </Link>
+                    </li>
+                  );
+                } else {
+                  return category.subcategories.map((subCat) => (
+                    <li>
+                      <a href={"/category/"+subCat.id}>{subCat.title}</a>
+                    </li>
+                  ));
+                }
+              })}
             </ul>
           </Col>
           <Col className="w3_footer_grid" col={3}>
@@ -124,7 +151,10 @@ function Footer() {
                   </li>
                   <li>
                     <a href="#" className="google">
-                      <FontAwesomeIcon icon={faGooglePlusG} aria-hidden="true" />
+                      <FontAwesomeIcon
+                        icon={faGooglePlusG}
+                        aria-hidden="true"
+                      />
                     </a>
                   </li>
                   <li>
@@ -134,7 +164,9 @@ function Footer() {
                   </li>
                   <li>
                     <a href="#" className="dribbble">
-                      <i><FontAwesomeIcon icon={faDribbble} aria-hidden="true" /></i>
+                      <i>
+                        <FontAwesomeIcon icon={faDribbble} aria-hidden="true" />
+                      </i>
                     </a>
                   </li>
                 </ul>
