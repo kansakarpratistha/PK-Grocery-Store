@@ -10,7 +10,7 @@ function ProductBreadCrumb(props){
 		<Container>
 			<ul>
 				<li><FontAwesomeIcon icon={faHome} aria-hidden="true"/><Link to="/">Home</Link><span>|</span></li>
-				<li>{props.text.toUpperCase()}</li>
+				<li>{props.text}</li>
 			</ul>
 		</Container>
 	</div>

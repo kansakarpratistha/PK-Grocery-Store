@@ -37,7 +37,7 @@ export const addToCart = (evt, prodId) => {
 
     fetchCart();
   } else {
-    window.location.href = "./login";
+    window.location.href = "/login";
   }
 };
 

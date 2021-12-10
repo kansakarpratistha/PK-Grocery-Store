@@ -5,7 +5,7 @@ import BannerLeft from "../BannerLeft";
 import ProductBreadCrumb from "../ProductsBreadCrumb";
 const ProductSearchBannerRight = lazy(() => import("../ProductSearchBannerRight"));
 
-function ProductSearch(props) {
+function ProductSearch() {
   const { searchKey } = useParams();
   DynamicTitle("PK Grocery | " + searchKey);
   return (

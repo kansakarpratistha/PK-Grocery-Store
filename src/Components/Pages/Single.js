@@ -1,4 +1,5 @@
-import { lazy, Suspense } from "react";
+import React, { lazy, Suspense } from "react";
+import { useParams } from "react-router";
 import DynamicTitle from "../DynamicTitle";
 import BannerLeft from "../BannerLeft";
 import ProductBreadCrumb from "../ProductsBreadCrumb";
@@ -6,20 +7,18 @@ const SingleBannerRight = lazy(() => import("../SingleBannerRight"));
 const SingleBrands = lazy(() => import("../SingleBrands"));
 
 function Single() {
-  DynamicTitle("PK Grocery | Single");
+  const { prodId } = useParams();
+  DynamicTitle("PK Grocery | Product Details");
   return (
     <>
-      <ProductBreadCrumb text="Single" />
+      <ProductBreadCrumb text="Product Details" />
       <div className="banner">
         <BannerLeft />
         <Suspense fallback={<div className="loading-el">Loading...</div>}>
-          <SingleBannerRight />
+          <SingleBannerRight prodId={prodId} />
         </Suspense>
         <div className="clearfix"></div>
       </div>
-      <Suspense fallback={<div className="loading-el">Loading...</div>}>
-        <SingleBrands />
-      </Suspense>
     </>
   );
 }

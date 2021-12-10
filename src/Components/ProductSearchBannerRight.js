@@ -68,7 +68,7 @@ function ProductSearchBannerRight(props) {
                       <figure>
                         <div className="snipcart-item block">
                           <div className="snipcart-thumb">
-                            <Link to="/">
+                            <Link to={"/single/"+product.id}>
                               <Image
                                 src={product.images[0].imageName}
                                 alt=" "

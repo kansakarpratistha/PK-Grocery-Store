@@ -42,15 +42,6 @@ function BannerRight() {
                     background: "url(" + img.images + ") no-repeat 0px 0px",
                   }}
                 >
-                  {/* <div className="more">
-                    <Link
-                      to="/products"
-                      className="button--saqui button--round-l button--text-thick"
-                      data-text="Shop now"
-                    >
-                      Shop now
-                    </Link>
-                  </div> */}
                 </div>
               </Carousel.Item>
             ))}
@@ -65,18 +56,6 @@ function BannerRight() {
         media="screen"
         property=""
       />
-      {/* <script defer src="js/jquery.flexslider.js"></script>
-				<script type="text/javascript">
-				$(window).load(function(){
-				  $('.flexslider').flexslider({
-					animation: "slide",
-					start: function(slider){
-					  $('body').removeClass('loading');
-					}
-				  });
-				});
-			  </script> */}
-      {/* <!-- //flexSlider --> */}
     </div>
   );
 }

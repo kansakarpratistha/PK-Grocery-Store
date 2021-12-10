@@ -1,11 +1,5 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import tag from "./images/tag.png";
-import image1 from "./images/1.png";
-import image3 from "./images/3.png";
-import offer from "./images/offer.png";
-import image2 from "./images/2.png";
-import image4 from "./images/4.png";
 import { Link } from "react-router-dom";
 import { addToCart } from "./CartFunctions";
 
@@ -54,7 +48,7 @@ function TopBrands(props) {
                       <figure>
                         <div className="snipcart-item block">
                           <div className="snipcart-thumb">
-                            <Link to="/single">
+                            <Link to={"/single/"+product.id}>
                               <Image
                                 fluid
                                 title=" "
@@ -113,7 +107,7 @@ function TopBrands(props) {
                       <figure>
                         <div className="snipcart-item block">
                           <div className="snipcart-thumb">
-                            <Link to="/single">
+                            <Link to={"/single/"+product.id}>
                               <Image
                                 fluid
                                 title=" "
@@ -172,7 +166,7 @@ function TopBrands(props) {
                       <figure>
                         <div className="snipcart-item block">
                           <div className="snipcart-thumb">
-                            <Link to="/single">
+                            <Link to={"/category/"+category.id}>
                               <Image
                                 fluid
                                 title=" "

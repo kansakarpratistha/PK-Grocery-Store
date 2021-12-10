@@ -1,22 +1,6 @@
 import React from "react";
 import { Col, Row, Image } from "react-bootstrap";
-import image13 from "./images/13.jpg";
-import image14 from "./images/14.jpg";
-import image15 from "./images/15.jpg";
 import offer from "./images/offer.png";
-import tag from "./images/tag.png";
-import image5 from "./images/5.png";
-import image6 from "./images/6.png";
-import image7 from "./images/7.png";
-import image8 from "./images/8.png";
-import image9 from "./images/9.png";
-import image10 from "./images/10.png";
-import image11 from "./images/11.png";
-import image12 from "./images/12.png";
-import image13png from "./images/13.png";
-import image14png from "./images/14.png";
-import image15png from "./images/15.png";
-import image16png from "./images/16.png";
 import { Link } from "react-router-dom";
 import { addToCart, addNew, updateCart } from "./CartFunctions";
 
@@ -73,7 +57,6 @@ function DealsBannerRight() {
             </Col>
           ))}
 
-          
           <div className="clearfix"> </div>
         </Row>
       </div>
@@ -102,7 +85,7 @@ function DealsBannerRight() {
                       <figure>
                         <div className="snipcart-item block">
                           <div className="snipcart-thumb">
-                            <Link to="/">
+                            <Link to={"/single/" + product.id}>
                               <Image
                                 src={product.images[0].imageName}
                                 alt=" "
@@ -112,7 +95,7 @@ function DealsBannerRight() {
                             </Link>
                             <p>{product.title}</p>
                             {/* {product.unitPrice[0].newPrice === 0 ? ( */}
-                              <h4>Rs {product.unitPrice[0].sellingPrice}</h4>
+                            <h4>Rs {product.unitPrice[0].sellingPrice}</h4>
                             {/* ) : (
                               <h4>
                                 Rs {product.unitPrice[0].newPrice}{" "}
@@ -121,7 +104,7 @@ function DealsBannerRight() {
                             )} */}
                           </div>
                           <div className="snipcart-details">
-                            <form onSubmit={(e)=> addToCart(e, product.id)}>
+                            <form onSubmit={(e) => addToCart(e, product.id)}>
                               <fieldset>
                                 <input
                                   type="submit"

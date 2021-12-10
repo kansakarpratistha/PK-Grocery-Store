@@ -1,10 +1,6 @@
 import React from "react";
 import { Table, Image, Row, Col, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { increaseProductQuanity, updateCart } from "./CartFunctions";
-import image1 from "./images/1.png";
-import image2 from "./images/2.png";
-import image3 from "./images/3.png";
 
 function CheckoutBannerRight() {
   const [cart, setCart] = React.useState({});
@@ -196,12 +192,6 @@ function CheckoutBannerRight() {
                   <td className="invert">
                     {cartProducts.indexOf(product) + 1}
                   </td>
-                  {/* <td className="invert-image">
-                  <Link to="/single">
-                    {" "}
-                    <Image fluid src={image1} alt=" " className="img-responsive" />
-                  </Link>
-                </td> */}
                   <td className="invert">
                     <div className="quantity">
                       <div className="quantity-select">

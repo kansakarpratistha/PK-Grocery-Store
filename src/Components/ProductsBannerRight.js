@@ -79,7 +79,6 @@ function ProductsBannerRight(props) {
       <div className="w3ls_w3l_banner_nav_right_grid w3ls_w3l_banner_nav_right_grid_sub">
         <h3>{props.categoryTitle}</h3>
         <div className="w3ls_w3l_banner_nav_right_grid1">
-          {/* <h6>cleaning</h6> */}
           <Row>
             {products.map((product) => (
               <Col md={3} className="w3ls_w3l_banner_left">
@@ -102,7 +101,7 @@ function ProductsBannerRight(props) {
                       <figure>
                         <div className="snipcart-item block">
                           <div className="snipcart-thumb">
-                            <Link to="/">
+                            <Link to={"/single/"+product.id}>
                               <Image
                                 src={product.images[0].imageName}
                                 alt=" "
@@ -123,39 +122,6 @@ function ProductsBannerRight(props) {
                           <div className="snipcart-details">
                             <form onSubmit={(e) => addToCart(e, product.id)}>
                               <fieldset>
-                                {/* <input type="hidden" name="cmd" value="_cart" />
-                                <input type="hidden" name="add" value="1" />
-                                <input
-                                  type="hidden"
-                                  name="business"
-                                  value=" "
-                                />
-                                <input
-                                  type="hidden"
-                                  name="item_name"
-                                  value="dishwash gel, lemon"
-                                />
-                                <input
-                                  type="hidden"
-                                  name="amount"
-                                  value="8.00"
-                                />
-                                <input
-                                  type="hidden"
-                                  name="discount_amount"
-                                  value="1.00"
-                                />
-                                <input
-                                  type="hidden"
-                                  name="currency_code"
-                                  value="USD"
-                                />
-                                <input type="hidden" name="return" value=" " />
-                                <input
-                                  type="hidden"
-                                  name="cancel_return"
-                                  value=" "
-                                /> */}
                                 <input
                                   type="submit"
                                   name="submit"

@@ -1,18 +1,12 @@
 import React, { useState } from "react";
 import MapGL, { GeolocateControl } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-// import MapboxWorker from 'worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker';
-// import ReactMapGL, { FlyToInterpolator, NavigationControl } from "react-map-gl";
 import {
   MapContainer,
   TileLayer,
   Marker,
   Popup,
 } from "@monsonjeremy/react-leaflet";
-import mapboxgl from "mapbox-gl";
-// @ts-ignore
-// eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
-// mapboxgl.workerClass = MapboxWorker.default;
 
 const TOKEN =
   "pk.eyJ1IjoicHJhdGlzdGhhIiwiYSI6ImNrdGN0dDM0NTBnYTYyb21hdnpoeTZzNGcifQ.Kpw1PTL5VVUTbk0sNF5M3g";

@@ -1,7 +1,37 @@
+import React from "react";
 import { Col, Row, Image } from "react-bootstrap";
-import image76 from './images/76.png';
+import { addToCart } from "./CartFunctions";
 
-function SingleBannerRight() {
+function SingleBannerRight(props) {
+  const [product, setProduct] = React.useState({});
+  const id = props.prodId;
+
+  React.useEffect(() => {
+    const url = `https://uat.ordering-boafresh.ekbana.net/api/v4/product/${id}`;
+    const headers = {
+      method: "GET",
+      headers: {
+        "Warehouse-id": "1",
+        "Api-key":
+          "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545",
+      },
+    };
+    const fetchData = async () => {
+      try {
+        const resp = await fetch(url, headers);
+        const json = await resp.json();
+        if (resp.status === 200) {
+          setProduct(json.data);
+        } else {
+          throw json.errors[0].message;
+        }
+      } catch (err) {
+        console.log("Error: ", err);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <div className="w3l_banner_nav_right">
       <div className="w3l_banner_nav_right_banner3">
@@ -10,16 +40,22 @@ function SingleBannerRight() {
         </h3>
       </div>
       <div className="agileinfo_single">
-        <h5>charminar pulao basmati rice 5 kg</h5>
+        <h5>{product.title}</h5>
         <Row>
           <Col md={4} className="agileinfo_single_left">
-            <Image
-            fluid
-              id="example"
-              src={image76}
-              alt=" "
-              className="img-responsive"
-            />
+            {Object.keys(product).map((key) => {
+              if (key === "images") {
+                return (
+                  <Image
+                    fluid
+                    id={product.id}
+                    src={product.images[0].imageName}
+                    alt=" "
+                    className="img-responsive"
+                  />
+                );
+              }
+            })}
           </Col>
           <Col md={8} className="agileinfo_single_right">
             <div className="rating1">
@@ -43,36 +79,24 @@ function SingleBannerRight() {
               </span>
             </div>
             <div className="w3agile_description">
+              <h4>Category :</h4>
+              <p>{product.categoryTitle}</p>
               <h4>Description :</h4>
-              <p>
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.Duis aute irure
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur.
-              </p>
+              <p>{product.description}</p>
+              <h4>Has Offer :</h4>
+              <p>{product.hasOffer}</p>
             </div>
             <div className="snipcart-item block">
               <div className="snipcart-thumb agileinfo_single_right_snipcart">
-                <h4>
-                  $21.00 <span>$25.00</span>
-                </h4>
+                {Object.keys(product).map((key) => {
+                  if (key === "unitPrice") {
+                    return <h4>Rs {product.unitPrice[0].sellingPrice}</h4>;
+                  }
+                })}
               </div>
               <div className="snipcart-details agileinfo_single_right_details">
-                <form action="#" method="post">
+                <form onSubmit={(e) => addToCart(e, product.id)}>
                   <fieldset>
-                    <input type="hidden" name="cmd" value="_cart" />
-                    <input type="hidden" name="add" value="1" />
-                    <input type="hidden" name="business" value=" " />
-                    <input
-                      type="hidden"
-                      name="item_name"
-                      value="pulao basmati rice"
-                    />
-                    <input type="hidden" name="amount" value="21.00" />
-                    <input type="hidden" name="discount_amount" value="1.00" />
-                    <input type="hidden" name="currency_code" value="USD" />
-                    <input type="hidden" name="return" value=" " />
-                    <input type="hidden" name="cancel_return" value=" " />
                     <input
                       type="submit"
                       name="submit"
